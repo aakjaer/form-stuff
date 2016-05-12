@@ -1,0 +1,12 @@
+// bootstrap variables
+@import "custom-bootstrap-variables";
+
+// custom variables
+$color-1: #45C0EC; // blue
+$color-2: #979797; // gray
+$color-3: #DCDCDC; // light gray
+$color-4: #45C0EC; // light blue
+
+$separator-color: #E2E2E2;
+
+$input-border-focus-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), 0.6);

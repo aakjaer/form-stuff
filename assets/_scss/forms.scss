@@ -1,0 +1,69 @@
+
+.form-section {
+	position: relative;
+	margin-top: 0;
+	padding: 20px 0;
+}
+
+.form-col {
+	width: auto;
+}
+
+.form-group:last-child {
+	margin-bottom: 0;
+}
+
+.form-control {
+	@include box-shadow(none);
+}
+
+.form-header {
+	display: none;
+	margin: 0 0 1em;
+	font-size: 1.2em;
+	color: lighten($text-color, 30%);
+	line-height: 1.5;
+	font-weight: 400;
+
+	@media screen and (min-width: $screen-sm-min) {
+		display: block;
+		font-size: 1em;
+	}
+}
+
+.control-label {
+	font-size: 0.95em;
+	font-weight: 600;
+}
+
+
+// horizontal form sections (form header placed next to form-controls)
+.form-section--horizontal {
+	@media screen and (min-width: $screen-sm-min) {
+
+		> .row {
+			margin-left: 20%;
+		}
+
+		.form-header {
+			position: absolute;
+			top: 50%;
+			max-width: 18%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.form-section--horizontal + .form-section--horizontal {
+	border-top: 1px solid $separator-color;
+}
+
+// form buttons and links (submit, cancel etc.)
+.form-actions {
+	margin: 40px 0 0;
+	padding: 20px 0 0;
+	border-top: 1px solid $separator-color;
+}
+
+
+

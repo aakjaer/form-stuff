@@ -1,0 +1,60 @@
+// typography
+h1, h2, h3, h4, h5 {
+}
+
+h1,.alpha   { }
+h2,.beta    { }
+h3,.gamma   { }
+h4,.delta   { }
+h5,.epsilon { }
+h6,.zeta    { }
+
+
+.thin { font-weight: 100; }
+.light { font-weight: 300; }
+.medium { font-weight: 500; }
+.bold { font-weight: 700; }
+.heavy { font-weight: 900; }
+
+.page-title {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+hr {
+    margin-bottom: 3em;
+    border-width: 3px;
+    max-width: 30px;
+    border-color: rgba(black, 0.2);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.separator-thin {
+    border-width: 1px;
+    max-width: 60px;
+}
+
+.separator-lg {
+    @media (min-width: $screen-sm-min) {
+        border-width: 8px;
+    	max-width: 60px;
+    }
+}
+
+.separator-full {
+	max-width: none;
+}
+
+.separator-left { margin-left: 0; }
+.separator-right { margin-right: 0; }
+.separator-white { border-color: white; }
+.separator-white-faded { border-color: rgba(white, 0.3); }
