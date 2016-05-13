@@ -4,18 +4,3 @@ body {
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-
-
-
-// tab navigation and content
-.nav-tabs {
-	border-bottom: 1px solid $separator-color;
-}
-
-.tab-content {
-	padding-top: 3em;
-}
-
-.nav-tabs__label {
- 	font-weight: 600;
-}

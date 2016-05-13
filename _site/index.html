@@ -16,18 +16,35 @@
 </div>
  
 <div>
-	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active">
-			<a class="nav-tabs__label" href="#setup" aria-controls="setup" role="tab" data-toggle="tab">Setup</a>
+	<ul class="tab-menu" role="tablist">
+		<li class="tab-menu__tab active" role="presentation">
+			<a href="#setup" aria-controls="setup" role="tab" data-toggle="tab">
+				<i class="tab-menu__icon icon-cog"></i> Setup
+			</a>
 		</li>
-		<li role="presentation">
-			<a class="nav-tabs__label" href="#history" aria-controls="history" role="tab" data-toggle="tab">History</a>
+		<li class="tab-menu__tab" role="presentation">
+			<a href="#history" aria-controls="history" role="tab" data-toggle="tab">
+				<i class="tab-menu__icon icon-history"></i> History
+			</a>
 		</li>
-		<li role="presentation">
-			<a class="nav-tabs__label" href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">Drivers</a>
+		<li class="tab-menu__tab" role="presentation">
+			<a href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">
+				<i class="tab-menu__icon icon-drivers"></i> Drivers
+			</a>
 		</li>
-		<li role="presentation">
-			<a class="nav-tabs__label" href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">Dianostics</a>
+		<li class="tab-menu__tab" role="presentation">
+			<a href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">
+				<i class="tab-menu__icon icon-diagnostics"></i> Dianostics
+			</a>
+		</li>
+		<li class="tab-menu__tab tab-menu__overflow-tab dropdown" role="presentation">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+				<i class="tab-menu__icon icon-overflow-menu"></i>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 1</a></li>
+				<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 2</a></li>
+			</ul>
 		</li>
 	</ul>
 
@@ -171,6 +188,11 @@
 		<!-- dianostics content -->
 		<div role="tabpanel" class="tab-pane" id="dianostics">
 			Dianostics
+		</div>
+
+		<!-- test content -->
+		<div role="tabpanel" class="tab-pane" id="overflow">
+			Overflow content
 		</div>
 	</div>
 </div>

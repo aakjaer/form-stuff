@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'fontello';
-  src: url('../fonts/icons/fontello.eot?97450461');
-  src: url('../fonts/icons/fontello.eot?97450461#iefix') format('embedded-opentype'),
-       url('../fonts/icons/fontello.woff2?97450461') format('woff2'),
-       url('../fonts/icons/fontello.woff?97450461') format('woff'),
-       url('../fonts/icons/fontello.ttf?97450461') format('truetype'),
-       url('../fonts/icons/fontello.svg?97450461#fontello') format('svg');
+  font-family: 'icons';
+  src: url('../fonts/icons/icons.eot?65614587');
+  src: url('../fonts/icons/icons.eot?65614587#iefix') format('embedded-opentype'),
+       url('../fonts/icons/icons.woff2?65614587') format('woff2'),
+       url('../fonts/icons/icons.woff?65614587') format('woff'),
+       url('../fonts/icons/icons.ttf?65614587') format('truetype'),
+       url('../fonts/icons/icons.svg?65614587#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,15 +14,14 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?97450461#fontello') format('svg');
+    font-family: 'icons';
+    src: url('../font/icons.svg?65614587#icons') format('svg');
   }
 }
 */
- 
- .icon,
+.icon::before,
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
+  font-family: "icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -55,6 +54,15 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-ok:before { content: '\e800'; } /* '' */
 .icon-cancel:before { content: '\e801'; } /* '' */
+.icon-menu-toggle:before { content: '\e802'; } /* '' */
+.icon-history:before { content: '\e803'; } /* '' */
+.icon-printer:before { content: '\e804'; } /* '' */
+.icon-user:before { content: '\e805'; } /* '' */
+.icon-dashboard:before { content: '\e806'; } /* '' */
+.icon-diagnostics:before { content: '\e807'; } /* '' */
+.icon-drivers:before { content: '\e808'; } /* '' */
+.icon-cog:before { content: '\e809'; } /* '' */
+.icon-overflow-menu:before { content: '\e80a'; } /* '' */
