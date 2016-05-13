@@ -165,7 +165,7 @@ $checkbox-icon: "\e800";
             &::before {
                 content: $swich-icon-on;
                 opacity: 0;
-                left: 20%;
+                left: 15%;
                 @include translate(75%,-50%);
                 color: #fff;
             }

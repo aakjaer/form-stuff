@@ -1,32 +1,61 @@
 // tab navigation and content
 .tab-menu {
 	@extend .nav;
+	display: flex;
 	border-bottom: 1px solid $separator-color;
-}
-
-// text label and icon
-.tab-menu__tab {
-	float: left;
-
-	+ .tab-menu__tab {
-		margin-left: .5em;
+	margin-left: -$grid-gutter-width/2;
+	margin-right: -$grid-gutter-width/2;
+	
+	// use flex only on small devices (hopefully a mobile browser)
+	@media screen and (min-width: $screen-sm-min) {
+		display: block;
 	}
 }
 
-.tab-menu__tab > a {
-	min-width: 6em;
-	min-height: 5em;
-	text-align: center;
- 	font-weight: 600;
- 	font-size: 0.9em;
- 	color: $text-color !important;
- 	@include transition(all 0.25s);
+// overriding bootstrap really sucks
+.tab-menu .tab-menu__tab {
+	flex: 1 1 auto;
 
- 	&:hover {
- 		border: 0;
-		color: $text-color;
- 	}
- }
+	// set fixed tab width on larger displays
+    @media screen and (min-width: $screen-sm-min) {
+    	flex: none;
+    	display: block;
+    	width: auto;
+		float: left;
+
+		+ .tab-menu__tab {
+			margin-left: .5em;
+		}
+    }
+
+
+	> a {
+		min-height: 5em;
+		text-align: center;
+		font-weight: 600;
+		font-size: 0.9em;
+		padding: 5px;
+		color: $text-color !important;
+		@include transition(all 0.25s);
+
+	    @media screen and (min-width: $screen-sm-min) {
+	    	min-height: 5em;
+	    	min-width: 6em; // force a somewhat similar width
+	    }
+
+
+		&:hover {
+			border: 0;
+			color: $text-color;
+		}
+	}
+}
+
+.tab-menu__tab-label {
+	@media screen and (max-width: 320px) {
+		display: none;
+	}
+}
 
 .tab-menu__icon {
 	display: block;
@@ -36,21 +65,30 @@
 	@include transition(transform 0.25s);
 }
 
-
 // overflow menu tab is a bit special ...
-.tab-menu__overflow-tab {
+.tab-menu .tab-menu__overflow-tab {
 
 	a { 
 		min-width: auto; 
 	}
 
 	.tab-menu__icon {
-		line-height: 1.6;
+		line-height: 2;
 	}
 }
 
+.tab-content {
+	padding-top: 2em;
+}
 
-// active/chose tab - overwriting bootstrap is always a trip
+
+///////////////////////////////////////
+
+// active state
+
+///////////////////////////////////////
+
+// active/chosen tab - override bootstrap is always a trip
 .tab-menu__tab.active > a {
 	border-width: 0; // reset bootstrap borders
 	@include box-shadow(inset 0 -3px 0 rgba($brand-blue,1));
@@ -61,7 +99,6 @@
 	}
 }
 
-.tab-content {
-	padding-top: 2em;
-}
+
+
 
