@@ -1,10 +1,21 @@
+$tab-menu-breakpoint: 320px;  // where does the text labels disappear
+$tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
+
 // tab navigation and content
 .tab-menu {
+	@extend .container;
+
+	// remove padding on small devices
+	@media screen and (max-width: $screen-sm-min) {
+		padding: 0;
+		padding: 0;
+	}
+}
+
+.tab-menu > ul {
 	@extend .nav;
 	display: flex;
 	border-bottom: 1px solid $separator-color;
-	margin-left: -$grid-gutter-width/2;
-	margin-right: -$grid-gutter-width/2;
 	
 	// use flex only on small devices (hopefully a mobile browser)
 	@media screen and (min-width: $screen-sm-min) {
@@ -28,18 +39,22 @@
 		}
     }
 
-
 	> a {
-		min-height: 5em;
 		text-align: center;
 		font-weight: 600;
 		font-size: 0.9em;
-		padding: 5px;
+		padding: 1.4em 0;
 		color: $text-color !important;
+		outline: 0;
+		@include user-select(none);
 		@include transition(all 0.25s);
 
+	    @media screen and (min-width: $tab-menu-breakpoint) {
+			min-height: 5em;
+	    	padding: 0.8em 0;
+	    }
+
 	    @media screen and (min-width: $screen-sm-min) {
-	    	min-height: 5em;
 	    	min-width: 6em; // force a somewhat similar width
 	    }
 
@@ -52,7 +67,7 @@
 }
 
 .tab-menu__tab-label {
-	@media screen and (max-width: 320px) {
+	@media screen and (max-width: 350px) {
 		display: none;
 	}
 }
@@ -65,22 +80,12 @@
 	@include transition(transform 0.25s);
 }
 
-// overflow menu tab is a bit special ...
-.tab-menu .tab-menu__overflow-tab {
-
-	a { 
-		min-width: auto; 
-	}
-
-	.tab-menu__icon {
-		line-height: 2;
+// overflow menu doesn't have text ...
+.tab-menu__overflow-tab .tab-menu__icon {
+	@media screen and (min-width: $tab-menu-breakpoint) {
+		line-height: 2.1;
 	}
 }
-
-.tab-content {
-	padding-top: 2em;
-}
-
 
 ///////////////////////////////////////
 
@@ -99,6 +104,8 @@
 	}
 }
 
-
+.tab-content {
+	padding-top: 1em;
+}
 
 

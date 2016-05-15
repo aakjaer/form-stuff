@@ -4,3 +4,9 @@ body {
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
+
+.page-header {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		display: none;
+	}
+}
