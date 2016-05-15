@@ -18,17 +18,13 @@
 }
 
 .form-header {
-	display: none;
 	margin: 0 0 1em;
-	font-size: 1.2em;
 	color: lighten($text-color, 30%);
+	font-size: 0.9em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: lighten($text-color, 50%);
 	line-height: 1.5;
-	font-weight: 400;
-
-	@media screen and (min-width: $screen-sm-min) {
-		display: block;
-		font-size: 1em;
-	}
 }
 
 .control-label {
@@ -63,6 +59,7 @@
 	margin: 3em 0 0;
 	padding: 1.3em 0;
 	border-top: 1px solid $separator-color;
+	@extend .mobile-full-width;
 
 	.btn-primary {
 		padding: 0.5em 3em;
@@ -70,8 +67,6 @@
 	}
 
 	@media screen and (max-width: $grid-float-breakpoint-max) {
-		
-
 		.btn-primary {
 			display: block;
 		}

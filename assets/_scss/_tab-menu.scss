@@ -6,7 +6,7 @@ $tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
 	@extend .container;
 
 	// remove padding on small devices
-	@media screen and (max-width: $screen-sm-min) {
+	@media screen and (max-width: $grid-float-breakpoint) {
 		padding: 0;
 		padding: 0;
 	}

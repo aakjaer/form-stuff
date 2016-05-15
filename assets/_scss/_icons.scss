@@ -20,6 +20,7 @@
 }
 */
 .icon::before,
+.icon::after,
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "icons";
   font-style: normal;

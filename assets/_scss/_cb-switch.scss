@@ -172,7 +172,7 @@ $checkbox-icon: "\e800";
 
             // off icon
             &::after {
-                content: $swich-icon-off;
+                content: "\e801";
                 right: 15%;
                 @include translate(0,-50%);
                 color: $color-2;
