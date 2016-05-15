@@ -1,4 +1,4 @@
-$tab-menu-breakpoint: 320px;  // where does the text labels disappear
+$tab-menu-breakpoint: 350px;  // where does the text labels collapse/disappear
 $tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
 
 // tab navigation and content
@@ -67,7 +67,7 @@ $tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
 }
 
 .tab-menu__tab-label {
-	@media screen and (max-width: 350px) {
+	@media screen and (max-width: $tab-menu-breakpoint) {
 		display: none;
 	}
 }

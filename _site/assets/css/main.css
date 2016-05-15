@@ -2578,8 +2578,8 @@ input[type="button"].btn-block {
   border-top: 1px solid #E2E2E2; }
 
 .form-actions {
-  margin: 40px 0 0;
-  padding: 20px 0 0;
+  margin: 3em 0;
+  padding: 1.5em 0 0;
   border-top: 1px solid #E2E2E2; }
 
 @font-face {
@@ -2869,7 +2869,7 @@ input[type="button"].btn-block {
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s; }
-    @media screen and (min-width: 320px) {
+    @media screen and (min-width: 350px) {
       .tab-menu .tab-menu__tab > a {
         min-height: 5em;
         padding: 0.8em 0; } }
@@ -2893,7 +2893,7 @@ input[type="button"].btn-block {
   -o-transition: transform 0.25s;
   transition: transform 0.25s; }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 350px) {
   .tab-menu__overflow-tab .tab-menu__icon {
     line-height: 2.1; } }
 
