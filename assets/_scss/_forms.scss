@@ -60,9 +60,22 @@
 
 // form buttons and links (submit, cancel etc.)
 .form-actions {
-	margin: 3em 0;
-	padding: 1.5em 0 0;
+	margin: 3em 0 0;
+	padding: 1.3em 0;
 	border-top: 1px solid $separator-color;
+
+	.btn-primary {
+		padding: 0.5em 3em;
+		font-size: 1.2em;
+	}
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		
+
+		.btn-primary {
+			display: block;
+		}
+	}
 }
 
 

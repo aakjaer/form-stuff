@@ -1854,31 +1854,31 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #45C0EC;
+  background-color: #35BA70;
   border-color: transparent; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #18b0e6;
+    background-color: #2a9258;
     border-color: transparent; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #18b0e6;
+    background-color: #2a9258;
     border-color: transparent; }
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #18b0e6;
+    background-color: #2a9258;
     border-color: transparent; }
     .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focus, .open > .btn-primary.dropdown-toggle.focus {
       color: #fff;
-      background-color: #1497c6;
+      background-color: #227747;
       border-color: transparent; }
   .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
     background-image: none; }
   .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus {
-    background-color: #45C0EC;
+    background-color: #35BA70;
     border-color: transparent; }
   .btn-primary .badge {
-    color: #45C0EC;
+    color: #35BA70;
     background-color: #fff; }
 
 .btn-success {
@@ -2578,9 +2578,15 @@ input[type="button"].btn-block {
   border-top: 1px solid #E2E2E2; }
 
 .form-actions {
-  margin: 3em 0;
-  padding: 1.5em 0 0;
+  margin: 3em 0 0;
+  padding: 1.3em 0;
   border-top: 1px solid #E2E2E2; }
+  .form-actions .btn-primary {
+    padding: 0.5em 3em;
+    font-size: 1.2em; }
+  @media screen and (max-width: 767px) {
+    .form-actions .btn-primary {
+      display: block; } }
 
 @font-face {
   font-family: 'Lato';
