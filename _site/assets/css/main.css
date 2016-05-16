@@ -2534,8 +2534,9 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
-.form--fixed {
-  padding-bottom: 7em; }
+@media screen and (max-width: 767px) {
+  .form--fixed {
+    padding-bottom: 7em; } }
 
 .form-col {
   width: auto; }

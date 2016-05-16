@@ -1,6 +1,8 @@
 // combine with .form-actions--fixed
 .form--fixed {
-	padding-bottom: 7em;
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		padding-bottom: 7em;
+	}
 }
 
 .form-col {
@@ -44,7 +46,7 @@
 // horizontal form sections (form header placed next to form-controls)
 .form-section--inline {
 
-	@media screen and (min-width: $screen-sm-min) {
+	@media screen and (min-width: $grid-float-breakpoint) {
 
 		> .row {
 			margin-left: 20%;
