@@ -1,3 +1,8 @@
+// combine with .form-actions--fixed
+.form--fixed {
+	padding-bottom: 7em;
+}
+
 .form-col {
 	width: auto;
 }
@@ -37,7 +42,7 @@
 }
 
 // horizontal form sections (form header placed next to form-controls)
-.form-section--horizontal {
+.form-section--inline {
 
 	@media screen and (min-width: $screen-sm-min) {
 
@@ -65,10 +70,12 @@
 
 // form buttons and links (submit, cancel etc.)
 .form-actions {
-	margin: 3em 0 0;
+	margin: 2em 0 0;
 	padding: 1.3em 0;
 	border-top: 1px solid $separator-color;
 	@extend .mobile-full-width;
+	text-align: right;
+	background: $body-bg;
 
 	.btn-primary {
 		padding: 0.5em 3em;
@@ -76,11 +83,18 @@
 	}
 
 	@media screen and (max-width: $grid-float-breakpoint-max) {
-		.btn-primary {
+		.btn {
 			display: block;
 		}
 	}
 }
 
+.form-actions--fixed {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+	}
+}
 
 
