@@ -2,24 +2,22 @@ $tab-menu-breakpoint: 350px;  // where does the text labels collapse/disappear
 $tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
 
 // tab navigation and content
-.tab-menu {
-	@extend .container;
-
+.tab-menu > .container {
 	// remove padding on small devices
-	@media screen and (max-width: $grid-float-breakpoint) {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
 		padding: 0;
 		padding: 0;
 	}
 }
 
-.tab-menu > ul {
+.tab-menu > .container > ul {
 	@extend .nav;
 	display: flex;
-	border-bottom: 1px solid $separator-color;
 	
 	// use flex only on small devices (hopefully a mobile browser)
-	@media screen and (min-width: $screen-sm-min) {
+	@media screen and (min-width: $grid-float-breakpoint) {
 		display: block;
+		border-bottom: 1px solid $separator-color;
 	}
 }
 
@@ -105,7 +103,9 @@ $tab-menu-breakpoint-max: ($tab-menu-breakpoint - 1);
 }
 
 .tab-content {
-	padding-top: 1em;
+	@media screen and (min-width: $grid-float-breakpoint) {
+		padding-top: 2em;
+	}
 }
 
 

@@ -1,59 +1,60 @@
 ---
 layout: default
+page-header: Printer settings
+page-subtitle: HP Officejet Color X555
 ---
 
+{%  include page-header.html %}
 
-<div class="page-header">
-	<div class="container">
-		<h1 class="page-title">Printer settings</h1>	
-		<p class="page-subtitle">HP Officejet Color X555</p>
-	</div>
-</div>
- 
-<nav class="tab-menu" role="tablist">
-	<ul>
-		<li class="tab-menu__tab active" role="presentation">
-			<a href="#setup" aria-controls="setup" role="tab" data-toggle="tab">
-				<i class="tab-menu__icon icon-cog"></i> 
-				<span class="tab-menu__tab-label">Setup</span>
-			</a>
-		</li>
-		<li class="tab-menu__tab" role="presentation">
-			<a href="#history" aria-controls="history" role="tab" data-toggle="tab">
-				<i class="tab-menu__icon icon-history"></i>
-				<span class="tab-menu__tab-label">History</span>
-			</a>
-		</li>
-		<li class="tab-menu__tab" role="presentation">
-			<a href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">
-				<i class="tab-menu__icon icon-drivers"></i> 
-				<span class="tab-menu__tab-label">Drivers</span>
-			</a>
-		</li>
-		<li class="tab-menu__tab" role="presentation">
-			<a href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">
-				<i class="tab-menu__icon icon-diagnostics"></i> 
-				<span class="tab-menu__tab-label">Dianostics</span>
-			</a>
-		</li>
-		<li class="tab-menu__tab tab-menu__overflow-tab dropdown" role="presentation">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-				<i class="tab-menu__icon icon-overflow-menu-2"></i>
-			</a>
-			<ul class="dropdown-menu dropdown-menu-right">
-				<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 1</a></li>
-				<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 2</a></li>
+<div class="section--separate">
+	<nav class="tab-menu" role="tablist">
+		<div class="container">
+			<ul>
+				<li class="tab-menu__tab active" role="presentation">
+					<a href="#setup" aria-controls="setup" role="tab" data-toggle="tab">
+						<i class="tab-menu__icon icon-cog"></i> 
+						<span class="tab-menu__tab-label">Setup</span>
+					</a>
+				</li>
+				<li class="tab-menu__tab" role="presentation">
+					<a href="#history" aria-controls="history" role="tab" data-toggle="tab">
+						<i class="tab-menu__icon icon-history"></i>
+						<span class="tab-menu__tab-label">History</span>
+					</a>
+				</li>
+				<li class="tab-menu__tab" role="presentation">
+					<a href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">
+						<i class="tab-menu__icon icon-drivers"></i> 
+						<span class="tab-menu__tab-label">Drivers</span>
+					</a>
+				</li>
+				<li class="tab-menu__tab" role="presentation">
+					<a href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">
+						<i class="tab-menu__icon icon-diagnostics"></i> 
+						<span class="tab-menu__tab-label">Dianostics</span>
+					</a>
+				</li>
+				<li class="tab-menu__tab tab-menu__overflow-tab dropdown" role="presentation">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="tab-menu__icon icon-overflow-menu-2"></i>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 1</a></li>
+						<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 2</a></li>
+					</ul>
+				</li>
 			</ul>
-		</li>
-	</ul>
-</nav>
+		</div>
+	</nav>
+</div>
 
+<div class="content-section">
 <div class="tab-content container">
 	<!-- setup content  -->
 	<div role="tabpanel" class="tab-pane active" id="setup">
 
 		<!-- status section -->
-		<fieldset class="form-section form-section--horizontal">
+		<fieldset class="form-section form-section--horizontal form-section--separate">
 			<h4 class="form-header hidden-xs">
 				Status
 			</h4>
@@ -73,7 +74,7 @@ layout: default
 
 		<!-- name section -->
 		<fieldset class="form-section form-section--horizontal">
-			<h4 class="form-header hidden-xs hidden-sm">
+			<h4 class="form-header hidden-xs">
 				Name
 			</h4>
 			<div class="row">
@@ -89,7 +90,7 @@ layout: default
 
 		<!-- location section -->
 		<fieldset class="form-section form-section--horizontal">
-			<h4 class="form-header hidden-xs hidden-sm">
+			<h4 class="form-header hidden-xs">
 				Location
 			</h4>
 			<div class="row">
@@ -195,3 +196,6 @@ layout: default
 		Overflow content
 	</div>
 </div>
+	
+</div>
+

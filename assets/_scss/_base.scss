@@ -5,10 +5,32 @@ body {
     font-smoothing: antialiased;
 }
 
+header[role="banner"] {
+
+}
+
+main {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		background: #F4F4F4;
+	}
+}
+
 .page-header {
 	@media screen and (max-width: $grid-float-breakpoint-max) {
 		display: none;
 	}
+}
+
+.section--separate {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		margin-bottom: 0.5em;
+		background: #fff;
+		@include box-shadow(1px 1px 2px 0px rgba(0,0,0,0.05));	
+	}
+}
+
+.content-section {
+	background: #fff;
 }
 
 .mobile-full-width {

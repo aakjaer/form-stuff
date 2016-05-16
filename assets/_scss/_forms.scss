@@ -1,10 +1,3 @@
-
-.form-section {
-	position: relative;
-	margin-top: 0;
-	padding: 20px 0;
-}
-
 .form-col {
 	width: auto;
 }
@@ -33,8 +26,19 @@
 }
 
 
+.form-section {
+	position: relative;
+	margin-top: 0;
+	padding: 20px 0;
+
+	+ .form-section {
+		border-top: 1px solid $separator-color;
+	}
+}
+
 // horizontal form sections (form header placed next to form-controls)
 .form-section--horizontal {
+
 	@media screen and (min-width: $screen-sm-min) {
 
 		> .row {
@@ -50,8 +54,13 @@
 	}
 }
 
-.form-section--horizontal + .form-section--horizontal {
-	border-top: 1px solid $separator-color;
+.form-section--separate {
+	@extend .mobile-full-width;
+	border-bottom: 1px solid $separator-color;
+
+	+ .form-section {
+		border: 0;
+	}
 }
 
 // form buttons and links (submit, cancel etc.)

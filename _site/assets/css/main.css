@@ -653,24 +653,24 @@ address {
   font-style: normal;
   line-height: 1.6; }
 
-.container, .tab-menu {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .tab-menu:before, .container:after, .tab-menu:after {
+  .container:before, .container:after {
     content: " ";
     display: table; }
-  .container:after, .tab-menu:after {
+  .container:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .tab-menu {
+    .container {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .tab-menu {
+    .container {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .tab-menu {
+    .container {
       width: 1170px; } }
 
 .container-fluid {
@@ -2172,41 +2172,41 @@ input[type="button"].btn-block {
   .navbar-right .dropdown-menu-left {
     left: 0;
     right: auto; } }
-.nav, .tab-menu > ul {
+.nav, .tab-menu > .container > ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
-  .nav:before, .tab-menu > ul:before, .nav:after, .tab-menu > ul:after {
+  .nav:before, .tab-menu > .container > ul:before, .nav:after, .tab-menu > .container > ul:after {
     content: " ";
     display: table; }
-  .nav:after, .tab-menu > ul:after {
+  .nav:after, .tab-menu > .container > ul:after {
     clear: both; }
-  .nav > li, .tab-menu > ul > li {
+  .nav > li, .tab-menu > .container > ul > li {
     position: relative;
     display: block; }
-    .nav > li > a, .tab-menu > ul > li > a {
+    .nav > li > a, .tab-menu > .container > ul > li > a {
       position: relative;
       display: block;
       padding: 10px 15px; }
-      .nav > li > a:hover, .tab-menu > ul > li > a:hover, .nav > li > a:focus, .tab-menu > ul > li > a:focus {
+      .nav > li > a:hover, .tab-menu > .container > ul > li > a:hover, .nav > li > a:focus, .tab-menu > .container > ul > li > a:focus {
         text-decoration: none;
         background-color: transparent; }
-    .nav > li.disabled > a, .tab-menu > ul > li.disabled > a {
+    .nav > li.disabled > a, .tab-menu > .container > ul > li.disabled > a {
       color: #999999; }
-      .nav > li.disabled > a:hover, .tab-menu > ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .tab-menu > ul > li.disabled > a:focus {
+      .nav > li.disabled > a:hover, .tab-menu > .container > ul > li.disabled > a:hover, .nav > li.disabled > a:focus, .tab-menu > .container > ul > li.disabled > a:focus {
         color: #999999;
         text-decoration: none;
         background-color: transparent;
         cursor: not-allowed; }
-  .nav .open > a, .tab-menu > ul .open > a, .nav .open > a:hover, .tab-menu > ul .open > a:hover, .nav .open > a:focus, .tab-menu > ul .open > a:focus {
+  .nav .open > a, .tab-menu > .container > ul .open > a, .nav .open > a:hover, .tab-menu > .container > ul .open > a:hover, .nav .open > a:focus, .tab-menu > .container > ul .open > a:focus {
     background-color: transparent;
     border-color: #50B2CE; }
-  .nav .nav-divider, .tab-menu > ul .nav-divider {
+  .nav .nav-divider, .tab-menu > .container > ul .nav-divider {
     height: 1px;
     margin: 11px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
-  .nav > li > a > img, .tab-menu > ul > li > a > img {
+  .nav > li > a > img, .tab-menu > .container > ul > li > a > img {
     max-width: none; }
 
 .nav-tabs {
@@ -2534,11 +2534,6 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
-.form-section {
-  position: relative;
-  margin-top: 0;
-  padding: 20px 0; }
-
 .form-col {
   width: auto; }
 
@@ -2562,6 +2557,13 @@ input[type="button"].btn-block {
   font-size: 0.95em;
   font-weight: 600; }
 
+.form-section {
+  position: relative;
+  margin-top: 0;
+  padding: 20px 0; }
+  .form-section + .form-section {
+    border-top: 1px solid #E2E2E2; }
+
 @media screen and (min-width: 768px) {
   .form-section--horizontal > .row {
     margin-left: 20%; }
@@ -2571,8 +2573,10 @@ input[type="button"].btn-block {
     max-width: 18%;
     transform: translateY(-50%); } }
 
-.form-section--horizontal + .form-section--horizontal {
-  border-top: 1px solid #E2E2E2; }
+.form-section--separate {
+  border-bottom: 1px solid #E2E2E2; }
+  .form-section--separate + .form-section {
+    border: 0; }
 
 .form-actions {
   margin: 3em 0 0;
@@ -2836,17 +2840,17 @@ input[type="button"].btn-block {
   .cb-switch input[type="checkbox"][disabled] + .cb-switch__label,
   .cb-switch input[type="checkbox"][disabled] + .cb-switch__label::before {
     opacity: 0.5; } }
-@media screen and (max-width: 768px) {
-  .tab-menu {
+@media screen and (max-width: 767px) {
+  .tab-menu > .container {
     padding: 0;
     padding: 0; } }
 
-.tab-menu > ul {
-  display: flex;
-  border-bottom: 1px solid #E2E2E2; }
+.tab-menu > .container > ul {
+  display: flex; }
   @media screen and (min-width: 768px) {
-    .tab-menu > ul {
-      display: block; } }
+    .tab-menu > .container > ul {
+      display: block;
+      border-bottom: 1px solid #E2E2E2; } }
 
 .tab-menu .tab-menu__tab {
   flex: 1 1 auto; }
@@ -2910,8 +2914,9 @@ input[type="button"].btn-block {
     -o-transform: translate(0, -3px);
     transform: translate(0, -3px); }
 
-.tab-content {
-  padding-top: 1em; }
+@media screen and (min-width: 768px) {
+  .tab-content {
+    padding-top: 2em; } }
 
 @font-face {
   font-family: 'icons';
@@ -3209,11 +3214,25 @@ body {
   font-smoothing: antialiased; }
 
 @media screen and (max-width: 767px) {
+  main {
+    background: #F4F4F4; } }
+
+@media screen and (max-width: 767px) {
   .page-header {
     display: none; } }
 
 @media screen and (max-width: 767px) {
-  .mobile-full-width, .form-actions {
+  .section--separate {
+    margin-bottom: 0.5em;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.05); } }
+
+.content-section {
+  background: #fff; }
+
+@media screen and (max-width: 767px) {
+  .mobile-full-width, .form-section--separate, .form-actions {
     margin-left: -15px;
     margin-right: -15px;
     padding-left: 15px;
