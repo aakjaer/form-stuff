@@ -7,6 +7,7 @@ include: list-checkboxes
 
 {%  include page-header.html %}
 
+
 <div class="section--separate">
 	<nav class="tab-menu" role="tablist">
 		<div class="container">
@@ -205,7 +206,7 @@ include: list-checkboxes
 						</div>
 						<ul class="list__col list__item-actions">
 							<li>
-								<a><i class="icon-lock"></i></a>
+								<a><i class="icon-lock{% if !driver.locked %}-open{% endif %}"></i></a>
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
