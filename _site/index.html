@@ -210,51 +210,140 @@
 		/////////////////////////////////////////////////////// -->
 
 		<div role="tabpanel" class="tab-pane active" id="drivers">
+			
 			<div class="list">
+	
+				<!-- list header -->
 				<header class="list__header">
-					<div class="list__header-col" data-sort="asc">
+					<div class="list__header-col list__col-cb">
+						<div class="cb">
+							<input id="checkbox-all" type="checkbox" />
+							<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
+						</div>
+					</div>
+					<div class="list__header-col hidden-xs" data-sort="">
 						<a>Driver name</a>
 					</div>
-					<div class="list__header-col list__item-actions" data-sort="desc">
-						<a>test</a>
+					<div class="list__header-col list__item-actions"></div>
+
+					<!-- sorting for small displays -->
+					<div class="list__sorting list__header-col">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+								Sort by <span class="list__sorting-label">Driver name</span> <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Driver name</a></li>
+								<li><a href="#">OS</a></li>
+							</ul>
+						</div>
 					</div>
 				</header>
-				<div class="list__item">
-					<div class="list__col">
-						<b class="list__item-title">Windows 10 x64</b>
-						<span class="list__item-description">HP Officejet Color X555 PCL 6</span>
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu-2"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
+				<!-- end list header /-->
+
+				<!-- list item -->
+				
+					<div class="list__item list__item--active">
+						<div class="list__col list__col-cb">
+							<div class="cb">
+								<input id="checkbox-1" type="checkbox" checked="checked" />
+								<label class="cb__label cb__label--hidden" for="checkbox-1"></label>
+							</div>
+						</div>
+						<div class="list__col">
+							<b class="list__item-title">OS X 10.11</b>
+							<span class="list__item-description">HP Officejet Color X555</span>
+						</div>
+						<div class="list__col list__item-actions">
+							<div class="list__item-overflow dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+									<i class="icon-overflow-menu"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Modify</a></li>
+									<li><a href="#" aria-controls="">Delete</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="list__item">
-					<div class="list__col">
-						<b class="list__item-title">Windows 10 x64</b>
-						<span class="list__item-description">HP Officejet Color X555 PCL 6</span>
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu-2"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
+				
+					<div class="list__item">
+						<div class="list__col list__col-cb">
+							<div class="cb">
+								<input id="checkbox-2" type="checkbox"  />
+								<label class="cb__label cb__label--hidden" for="checkbox-2"></label>
+							</div>
+						</div>
+						<div class="list__col">
+							<b class="list__item-title">OS X 10.11</b>
+							<span class="list__item-description">HP Officejet Color X555</span>
+						</div>
+						<div class="list__col list__item-actions">
+							<div class="list__item-overflow dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+									<i class="icon-overflow-menu"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Modify</a></li>
+									<li><a href="#" aria-controls="">Delete</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
+				
+					<div class="list__item">
+						<div class="list__col list__col-cb">
+							<div class="cb">
+								<input id="checkbox-3" type="checkbox"  />
+								<label class="cb__label cb__label--hidden" for="checkbox-3"></label>
+							</div>
+						</div>
+						<div class="list__col">
+							<b class="list__item-title">OS X 10.11</b>
+							<span class="list__item-description">HP Officejet Color X555</span>
+						</div>
+						<div class="list__col list__item-actions">
+							<div class="list__item-overflow dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+									<i class="icon-overflow-menu"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Modify</a></li>
+									<li><a href="#" aria-controls="">Delete</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				
+					<div class="list__item">
+						<div class="list__col list__col-cb">
+							<div class="cb">
+								<input id="checkbox-4" type="checkbox"  />
+								<label class="cb__label cb__label--hidden" for="checkbox-4"></label>
+							</div>
+						</div>
+						<div class="list__col">
+							<b class="list__item-title">OS X 10.11</b>
+							<span class="list__item-description">HP Officejet Color X555</span>
+						</div>
+						<div class="list__col list__item-actions">
+							<div class="list__item-overflow dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+									<i class="icon-overflow-menu"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Modify</a></li>
+									<li><a href="#" aria-controls="">Delete</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				<!-- list item end /-->
 			</div>
 		</div>
 
@@ -277,6 +366,15 @@
         <script src="/assets/js/modernizr.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
+<script>
+	// TESTING ONLY!!! REMOVE FOR PRODUCTION !!!
+	$('.list .cb :checkbox').change(function(){
+		var listItem = $(this).closest('.list__item');
+		
+		listItem.toggleClass('list__item--active');
+	});
+</script>
+
         <script src="/assets/js/main.js"></script>
         </script>
     </body>

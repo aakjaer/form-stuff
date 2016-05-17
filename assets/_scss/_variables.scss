@@ -10,7 +10,38 @@ $color-2: #979797; // gray
 $color-3: #DCDCDC; // light gray
 $color-4: #45C0EC; // light blue
 
+$ColorWhite: #FFFFFF;
+$ColorBlack: #000000;
+$ColorRed1: #C00000;
+$ColorGray0: #F2F2F2;
+$ColorGray1: #CCCCCC;
+$ColorGray2: #AFAFAF;
+$ColorGray3: #999999;
+$ColorGray4: #737373;
+$ColorGray5: #666666;
+$ColorGray5RGB: rgb(102, 102, 102);
+$ColorOrange0: #F29400;
+$ColorOrange1: #EF9321;
+$ColorOrange2: #DD8005;
+$ColorOrange3: #F5A933;
+$ColorBlue0: #76C5DB;
+$ColorBlue1: #259FC2;
+$ColorBlue2: #0582AD;
+$ColorGreen0: #7EBC96;
+$ColorGreen1: #5EAC7C;
+$ColorCyanCMYK: #009EE0;
+$ColorMagentaCMYK: #E2007A;
+$ColorYellowCMYK: #FFED00;
+$colorBlackCMYK: #000000;
+
+
+$icon-font: "icons";
+
+// lists
+$list-item-active-bg: #EBF7FB;
+
 
 $separator-color: #E2E2E2;
+$separator-active-color: #BDE4F0;
 
 $input-border-focus-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), 0.6);

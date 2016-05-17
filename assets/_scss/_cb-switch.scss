@@ -18,7 +18,7 @@
 ///////////////////////////////////////////////////////////////
 
 
-@import "custom-bootstrap-variables";
+@import "variables";
 
 // proportions
 $switch-width: 55px;
@@ -28,7 +28,7 @@ $switch-knob-size: $switch-height - ($switch-padding * 2);
 
 
 // font icon values
-$cb-switch-icon-font: "icons";
+$cb-switch-icon-font: $icon-font; // use global name
 $swich-icon-on: "\e800";
 $swich-icon-off: "\e801";
 
@@ -262,7 +262,7 @@ $checkbox-icon: "\e800";
         @include translate3d(0,0,0);
     }
 
-    input[type="checkbox"],
+    .cb-switch input[type="checkbox"],
     .cb-switch__label::before,
     .cb-switch__label::after {
         position: absolute;

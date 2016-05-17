@@ -1,3 +1,11 @@
+///////////////////////////////////////
+
+// list - mimics table layout
+
+///////////////////////////////////////
+
+// general styling 
+
 .list {
 	margin-left: $grid-gutter-width / -2;
 	margin-right: $grid-gutter-width / -2;
@@ -18,11 +26,18 @@
 	display: table-cell;
 	vertical-align: middle;
 	padding: 10px 15px;
-	border-bottom: 1px solid $separator-color;
+	border-top: 1px solid $separator-color;
 
 	// reset bootstrap columns
 	float: none;
 }
+
+
+///////////////////////////////////////
+
+// header
+
+///////////////////////////////////////
 
 .list__header-col {
 
@@ -36,7 +51,7 @@
 	&[data-sort="asc"] a::after,
 	&[data-sort="desc"] a::after {
 		@extend .icon;
-		font-size: 1.4em;
+		font-size: 0.5em;
 		vertical-align: middle;
 	}
 
@@ -48,6 +63,65 @@
 		content: "\e80d";
 	}
 }
+
+.list__col-cb {
+	width: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+
+// a dropdown sorting replaces the list header on smaller devices to save space
+.list__sorting {
+	text-align: right;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		display: none;
+	}
+}
+
+.list__sorting-label {
+	color: $link-color;	
+}
+
+///////////////////////////////////////
+
+// list item
+
+///////////////////////////////////////
+
+.list__item {
+	@include transition(background 0.25s);
+}
+
+// last list item needs bottom border
+.list__item:last-child .list__col {
+	border-bottom: 1px solid $separator-color;
+}
+
+.list__item--active {
+	background: $list-item-active-bg;
+}
+
+// active list items have highlighted borders
+.list__item--active .list__col,
+.list__item--active + .list__item .list__col,
+.list__item--active:last-child .list__col {
+	border-color: $separator-active-color;
+}
+
+
+// inline actions are in a overflow/dropdown menu
+.list__item-overflow > .dropdown-toggle {
+	font-size: 1.3em;
+	color: $text-color;
+}
+
+///////////////////////////////////////
+
+// list content
+
+///////////////////////////////////////
 
 .list__item-actions {
 	width: 20%;

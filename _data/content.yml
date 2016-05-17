@@ -1,0 +1,14 @@
+drivers:
+  - title: OS X 10.11
+    os: win
+    printer: HP Officejet Color X555
+    active: true
+  - title: OS X 10.11
+    os: win
+    printer: HP Officejet Color X555
+  - title: OS X 10.11
+    os: win
+    printer: HP Officejet Color X555
+  - title: OS X 10.11
+    os: win
+    printer: HP Officejet Color X555

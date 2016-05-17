@@ -2,6 +2,7 @@
 layout: default
 page-header: Printer settings
 page-subtitle: HP Officejet Color X555
+include: list-checkboxes
 ---
 
 {%  include page-header.html %}
@@ -193,51 +194,65 @@ page-subtitle: HP Officejet Color X555
 		/////////////////////////////////////////////////////// -->
 
 		<div role="tabpanel" class="tab-pane active" id="drivers">
+			
 			<div class="list">
+	
+				<!-- list header -->
 				<header class="list__header">
-					<div class="list__header-col" data-sort="asc">
+					<div class="list__header-col list__col-cb">
+						<div class="cb">
+							<input id="checkbox-all" type="checkbox" />
+							<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
+						</div>
+					</div>
+					<div class="list__header-col hidden-xs" data-sort="">
 						<a>Driver name</a>
 					</div>
-					<div class="list__header-col list__item-actions" data-sort="desc">
-						<a>test</a>
+					<div class="list__header-col list__item-actions"></div>
+
+					<!-- sorting for small displays -->
+					<div class="list__sorting list__header-col">
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+								Sort by <span class="list__sorting-label">Driver name</span> <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Driver name</a></li>
+								<li><a href="#">OS</a></li>
+							</ul>
+						</div>
 					</div>
 				</header>
-				<div class="list__item">
-					<div class="list__col">
-						<b class="list__item-title">Windows 10 x64</b>
-						<span class="list__item-description">HP Officejet Color X555 PCL 6</span>
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu-2"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
+				<!-- end list header /-->
+
+				<!-- list item -->
+				{% for driver in site.data.content.drivers %}
+					<div class="list__item{% if driver.active %} list__item--active{% endif %}">
+						<div class="list__col list__col-cb">
+							<div class="cb">
+								<input id="checkbox-{{ forloop.index }}" type="checkbox" {% if driver.active %}checked="checked"{% endif %} />
+								<label class="cb__label cb__label--hidden" for="checkbox-{{ forloop.index }}"></label>
+							</div>
+						</div>
+						<div class="list__col">
+							<b class="list__item-title">{{ driver.title }}</b>
+							<span class="list__item-description">{{ driver.printer }}</span>
+						</div>
+						<div class="list__col list__item-actions">
+							<div class="list__item-overflow dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+									<i class="icon-overflow-menu"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">Info</a></li>
+									<li><a href="#">Modify</a></li>
+									<li><a href="#" aria-controls="">Delete</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="list__item">
-					<div class="list__col">
-						<b class="list__item-title">Windows 10 x64</b>
-						<span class="list__item-description">HP Officejet Color X555 PCL 6</span>
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu-2"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				{% endfor %}	
+				<!-- list item end /-->
 			</div>
 		</div>
 

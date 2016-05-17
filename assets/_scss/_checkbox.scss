@@ -1,0 +1,139 @@
+
+
+///////////////////////////////////////////////////////////////
+
+// Custom checkboxes
+
+///////////////////////////////////////////////////////////////
+
+@import "variables";
+
+
+$checkbox-size: 20px;
+$checkbox-icon: "\e800";
+
+///////////////////////////////////////////////////////////////
+
+
+.cb {
+    @extend .checkbox;
+}
+
+// make sure the real checkbox is on top of the other elements.
+.cb input[type="checkbox"] {
+    opacity: 0;
+    z-index: 10;
+    margin: 0;
+    cursor: pointer;
+}
+
+.cb__label:hover {
+    cursor: pointer;
+}
+
+
+///////////////////////////////////////
+
+.cb {
+    margin: 0;
+    min-height: $checkbox-size;
+}
+
+.cb + .cb {
+    margin-top: 0;
+}
+
+.cb .cb__label {
+    position: relative;
+    max-width: none;
+    min-height: $checkbox-size;
+    padding-left: $checkbox-size + 15;
+    color: lighten($text-color, 25%);
+    @include transition(color 0.2s);
+    @include user-select(none);
+    @include backface-visibility(hidden);
+    @include translate3d(0,0,0);
+}
+
+.cb .cb__label--hidden {
+    padding-left: 0;
+}
+
+.cb input[type="checkbox"],
+.cb__label::before,
+.cb__label::after {
+    position: absolute;
+    display: inline-block;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+}
+
+.cb__label::before,
+.cb__label::after {
+    content: "";
+    top: 2px;
+    text-align: center;
+    @include transition(all 0.2s);
+}
+
+// checkbox background
+.cb__label::before {
+    background: #fff;
+    border: 1px solid $input-border;
+    will-change: transform;
+}
+
+// check icon
+.cb__label::after {
+    content: $checkbox-icon;
+    font-family: $icon-font;
+    opacity: 0;
+    line-height: $checkbox-size;
+    font-size: 0.75em;
+    color: white;
+    @include translate(0,-25%);
+    @include transition-delay(0s);
+}
+
+///////////////////////////////////////
+
+//  checked state
+
+///////////////////////////////////////
+
+.cb input[type="checkbox"]:checked + .cb__label {
+    color: $text-color;
+
+    // checkbox background
+    &::before {
+        background: $color-4;
+        border-color: $color-4;
+        @include transition-delay(0s);
+    }
+
+    &::after {
+        opacity: 1;
+        transform: translateY(0);
+        @include transition-delay(0.1s);
+    }
+}
+
+///////////////////////////////////////
+
+//  deactivated state
+
+///////////////////////////////////////
+
+.cb input[type="checkbox"][disabled] + .cb__label,
+.cb input[type="checkbox"][disabled] + .cb__label::before {
+    opacity: 0.5;
+}
+
+// //  :focus state (when tabbing)
+// .cb input[type="checkbox"]:focus + .cb__label::before {
+//     // @include box-shadow(0 0 8px $input-border-focus-rgba);
+//     background-color: $gray-lighter;
+// }

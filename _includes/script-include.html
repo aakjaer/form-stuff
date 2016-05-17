@@ -1,0 +1,10 @@
+{% if page.include contains "list-checkboxes" %}
+<script>
+	// TESTING ONLY!!! REMOVE FOR PRODUCTION !!!
+	$('.list .cb :checkbox').change(function(){
+		var listItem = $(this).closest('.list__item');
+		
+		listItem.toggleClass('list__item--active');
+	});
+</script>
+{% endif %}
