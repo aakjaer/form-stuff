@@ -111,21 +111,30 @@
 }
 
 
-// inline actions are in a overflow/dropdown menu
-.list__item-overflow > .dropdown-toggle {
-	font-size: 1.3em;
-	color: $text-color;
-}
-
 ///////////////////////////////////////
 
 // list content
 
 ///////////////////////////////////////
 
+// inline actions are in a overflow/dropdown menu
+
 .list__item-actions {
 	width: 20%;
 	text-align: right;
+	@extend .list-unstyled;
+
+	> li {
+		display: inline-block;
+	}
+	
+	> li > a {
+		color: $text-color;
+	}
+}
+
+.list__item-overflow > .dropdown-toggle {
+	font-size: 1.3em;
 }
 
 .list__item-title {
