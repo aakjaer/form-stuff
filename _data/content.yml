@@ -1,14 +1,14 @@
 drivers:
-  - title: OS X 10.11
-    os: win
+  - title: Windows 10 x32
+    os: windows
     printer: HP Officejet Color X555
-  - title: OS X 10.11
-    os: win
+  - title: Windows 10 x64
+    os: windows
     printer: HP Officejet Color X555
     locked: true
-  - title: OS X 10.11 what happens if we do this and put in a super long text
-    os: win
-    printer: HP Officejet Color X555 and a really long name
+  - title: Windows 10 x64
+    os: windows
+    printer: HP Officejet Color X555
   - title: OS X 10.11
-    os: win
+    os: apple
     printer: HP Officejet Color X555

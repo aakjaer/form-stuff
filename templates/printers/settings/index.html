@@ -200,6 +200,9 @@ include: list-checkboxes
 				<!-- list item -->
 				{% for driver in site.data.content.drivers %}
 					<div class="list__item">
+						<div class="list__col list__item-icon">
+							<i class="icon-{{ driver.os }}"></i>
+						</div>
 						<div class="list__col">
 							<b class="list__item-title">{{ driver.title }}</b>
 							<span class="list__item-description">{{ driver.printer }}</span>

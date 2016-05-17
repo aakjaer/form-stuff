@@ -3058,7 +3058,9 @@ input[type="button"].btn-block {
 .list__col {
   display: table-cell;
   vertical-align: middle;
-  padding: 10px 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
   border-top: 1px solid #E2E2E2;
   float: none; }
 
@@ -3094,6 +3096,9 @@ input[type="button"].btn-block {
   -o-transition: background 0.25s;
   transition: background 0.25s; }
 
+.list__col:last-child {
+  padding-right: 15px; }
+
 .list__item:last-child .list__col {
   border-bottom: 1px solid #E2E2E2; }
 
@@ -3105,8 +3110,12 @@ input[type="button"].btn-block {
 .list__item--active:last-child .list__col {
   border-color: #BDE4F0; }
 
+.list__item-icon {
+  width: 30px;
+  font-size: 1.3em; }
+
 .list__item-actions {
-  width: 25%;
+  width: 35%;
   text-align: right; }
   .list__item-actions > li {
     display: inline-block; }
