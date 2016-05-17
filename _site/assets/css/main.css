@@ -553,7 +553,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled {
+.list-unstyled, .page-actions {
   padding-left: 0;
   list-style: none; }
 
@@ -3075,7 +3075,7 @@ input[type="button"].btn-block {
   content: "\e80d"; }
 
 .list__col-cb {
-  width: 20px;
+  width: 70px;
   padding-left: 25px;
   padding-right: 25px;
   text-align: center; }
@@ -3115,6 +3115,7 @@ input[type="button"].btn-block {
 
 .list__item-title {
   display: block;
+  line-height: 1em;
   font-weight: 600; }
 
 .list__item-description {
@@ -3225,6 +3226,22 @@ input[type="button"].btn-block {
   content: '\e80d'; }
 
 /* '' */
+.icon-add:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-refresh:before {
+  content: '\e80f'; }
+
+/* '' */
+.icon-search:before {
+  content: '\e810'; }
+
+/* '' */
+.icon-delete:before {
+  content: '\e811'; }
+
+/* '' */
 .thin {
   font-weight: 100; }
 
@@ -3454,3 +3471,18 @@ body {
     margin-right: -15px;
     padding-left: 15px;
     padding-right: 15px; } }
+
+.page-actions {
+  margin: 1em 0;
+  text-align: right; }
+  .page-actions li {
+    display: inline-block; }
+  .page-actions li + li {
+    margin-left: 1.2em; }
+  .page-actions button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 1.3em; }
