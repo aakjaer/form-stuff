@@ -2554,7 +2554,7 @@ input[type="button"].btn-block {
   font-size: 0.9em;
   font-weight: 600;
   text-transform: uppercase;
-  color: #c4c4c4;
+  color: #9d9d9d;
   line-height: 1.5; }
 
 .control-label {
@@ -2930,6 +2930,50 @@ input[type="button"].btn-block {
   .tab-content {
     padding-top: 2em; } }
 
+.list {
+  margin-left: -15px;
+  margin-right: -15px; }
+  @media screen and (min-width: 768px) {
+    .list {
+      margin: 0; } }
+
+.list__header,
+.list__item {
+  display: table;
+  width: 100%; }
+
+.list__header-col,
+.list__col {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 15px;
+  border-bottom: 1px solid #E2E2E2;
+  float: none; }
+
+.list__header-col a {
+  color: #444;
+  font-size: 0.95em;
+  text-decoration: none; }
+.list__header-col[data-sort="asc"] a::after, .list__header-col[data-sort="desc"] a::after {
+  font-size: 1.4em;
+  vertical-align: middle; }
+.list__header-col[data-sort="asc"] a::after {
+  content: "\e80c"; }
+.list__header-col[data-sort="desc"] a::after {
+  content: "\e80d"; }
+
+.list__item-actions {
+  width: 20%;
+  text-align: right; }
+
+.list__item-title {
+  display: block;
+  font-weight: 600; }
+
+.list__item-description {
+  font-size: 0.85em;
+  color: #999999; }
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons/icons.eot?65614587");
@@ -2949,6 +2993,8 @@ input[type="button"].btn-block {
 .icon::before, .cb-switch__icon::before,
 .icon::after,
 .cb-switch__icon::after,
+.list__header-col[data-sort="asc"] a::after,
+.list__header-col[data-sort="desc"] a::after,
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "icons";
   font-style: normal;
@@ -3004,26 +3050,34 @@ input[type="button"].btn-block {
   content: '\e806'; }
 
 /* '' */
-.icon-diagnostics:before {
+.icon-drivers:before {
   content: '\e807'; }
 
 /* '' */
-.icon-drivers:before {
+.icon-cog:before {
   content: '\e808'; }
 
 /* '' */
-.icon-cog:before {
+.icon-diagnostics:before {
   content: '\e809'; }
 
 /* '' */
-.icon-overflow-menu-2:before {
+.icon-overflow-menu:before {
   content: '\e80a'; }
 
 /* '' */
-.icon-overflow-menu:before {
+.icon-overflow-menu-2:before {
   content: '\e80b'; }
 
 /* '' */
+.icon-sort-down:before {
+  content: '\e80c'; }
+
+/* '' */
+.icon-sort-up:before {
+  content: '\e80d'; }
+
+/* '' */
 .thin {
   font-weight: 100; }
 
@@ -3224,6 +3278,9 @@ body {
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   font-smoothing: antialiased; }
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 16px; } }
 
 @media screen and (max-width: 767px) {
   main {

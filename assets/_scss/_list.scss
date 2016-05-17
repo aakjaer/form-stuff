@@ -1,0 +1,69 @@
+.list {
+	margin-left: $grid-gutter-width / -2;
+	margin-right: $grid-gutter-width / -2;
+
+	@media screen and (min-width: $grid-float-breakpoint) {	
+		margin: 0;
+	}
+}
+
+.list__header,
+.list__item {
+	display: table;
+	width: 100%;
+}
+
+.list__header-col,
+.list__col {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px 15px;
+	border-bottom: 1px solid $separator-color;
+
+	// reset bootstrap columns
+	float: none;
+}
+
+.list__header-col {
+
+	a {
+		color: $text-color;
+		font-size: 0.95em;
+		text-decoration: none;
+	}
+
+	// sorting 
+	&[data-sort="asc"] a::after,
+	&[data-sort="desc"] a::after {
+		@extend .icon;
+		font-size: 1.4em;
+		vertical-align: middle;
+	}
+
+	&[data-sort="asc"] a::after {
+		content: "\e80c";
+	}
+
+	&[data-sort="desc"] a::after {
+		content: "\e80d";
+	}
+}
+
+.list__item-actions {
+	width: 20%;
+	text-align: right;
+}
+
+.list__item-title {
+	display: block;
+	font-weight: 600;
+}
+
+.list__item-description {
+	font-size: 0.85em;
+	color: $gray-light;
+}
+
+///
+
+.list-actions {}

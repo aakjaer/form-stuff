@@ -3,6 +3,11 @@ body {
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
+
+	// increase base size on larger displays
+	@media screen and (min-width: $grid-float-breakpoint) {
+		font-size: 16px;	
+	}
 }
 
 header[role="banner"] {
