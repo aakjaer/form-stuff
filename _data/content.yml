@@ -1,3 +1,22 @@
+printers:
+  - title: Printix Freedom
+    id: "000"
+    status: online
+  - title: HP Officejet Color X555
+    id: ADS
+    status: online
+    location: Copenhagen office - Lobby
+  - title: Hewlett-Packard LaserJet P4515
+    id: BNM
+    status: offline
+  - title: HP LaserJet 500 MFP M525
+    id: CVB
+    status: online
+    location: Copenhagen office - Lobby
+  - title: RICOH Aficio SP C420DN
+    id: DFG
+    status: warning
+
 drivers:
   - title: Windows 10 x32
     os: windows
@@ -8,6 +27,12 @@ drivers:
     locked: true
   - title: Windows 10 x64
     os: windows
+    printer: HP Officejet Color X555
+  - title: OS X 10.11
+    os: apple
+    printer: HP Officejet Color X555
+  - title: OS X 10.11
+    os: apple
     printer: HP Officejet Color X555
   - title: OS X 10.11
     os: apple

@@ -2552,6 +2552,61 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
+.thin {
+  font-weight: 100; }
+
+.light {
+  font-weight: 300; }
+
+.medium {
+  font-weight: 500; }
+
+.bold {
+  font-weight: 700; }
+
+.heavy {
+  font-weight: 900; }
+
+.page-title {
+  font-size: 32px;
+  font-weight: 300; }
+
+.page-subtitle {
+  font-size: 20px;
+  font-weight: 300; }
+
+hr {
+  margin-bottom: 3em;
+  border-width: 3px;
+  max-width: 30px;
+  border-color: rgba(0, 0, 0, 0.2); }
+  hr:last-child {
+    margin-bottom: 0; }
+
+.separator-thin {
+  border-width: 1px;
+  max-width: 60px; }
+
+@media (min-width: 768px) {
+  .separator-lg {
+    border-width: 8px;
+    max-width: 60px; } }
+
+.separator-full {
+  max-width: none; }
+
+.separator-left {
+  margin-left: 0; }
+
+.separator-right {
+  margin-right: 0; }
+
+.separator-white {
+  border-color: white; }
+
+.separator-white-faded {
+  border-color: rgba(255, 255, 255, 0.3); }
+
 @media screen and (max-width: 767px) {
   .form--fixed {
     padding-bottom: 7em; } }
@@ -2659,6 +2714,143 @@ input[type="button"].btn-block {
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizeLegibility; }
+@font-face {
+  font-family: 'icons';
+  src: url("../fonts/icons/icons.eot?65614587");
+  src: url("../fonts/icons/icons.eot?65614587#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2?65614587") format("woff2"), url("../fonts/icons/icons.woff?65614587") format("woff"), url("../fonts/icons/icons.ttf?65614587") format("truetype"), url("../fonts/icons/icons.svg?65614587#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('../font/icons.svg?65614587#icons') format('svg');
+  }
+}
+*/
+.icon::before, .cb-switch__icon::before, .status-icon::before,
+.icon::after,
+.cb-switch__icon::after,
+.list__header-col[data-sort="asc"] a::after,
+.list__header-col[data-sort="desc"] a::after,
+.status-icon::after,
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-ok:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-cancel:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-menu-toggle:before {
+  content: '\e802'; }
+
+/* '' */
+.icon-history:before {
+  content: '\e803'; }
+
+/* '' */
+.icon-printer:before {
+  content: '\e804'; }
+
+/* '' */
+.icon-user:before {
+  content: '\e805'; }
+
+/* '' */
+.icon-dashboard:before {
+  content: '\e806'; }
+
+/* '' */
+.icon-drivers:before {
+  content: '\e807'; }
+
+/* '' */
+.icon-cog:before {
+  content: '\e808'; }
+
+/* '' */
+.icon-diagnostics:before {
+  content: '\e809'; }
+
+/* '' */
+.icon-overflow-menu:before {
+  content: '\e80a'; }
+
+/* '' */
+.icon-overflow-menu-2:before {
+  content: '\e80b'; }
+
+/* '' */
+.icon-sort-down:before {
+  content: '\e80c'; }
+
+/* '' */
+.icon-sort-up:before {
+  content: '\e80d'; }
+
+/* '' */
+.icon-add:before {
+  content: '\e80e'; }
+
+/* '' */
+.icon-refresh:before {
+  content: '\e80f'; }
+
+/* '' */
+.icon-search:before {
+  content: '\e810'; }
+
+/* '' */
+.icon-delete:before {
+  content: '\e811'; }
+
+/* '' */
+.icon-lock-open:before {
+  content: '\e812'; }
+
+/* '' */
+.icon-apple:before {
+  content: '\e813'; }
+
+/* '' */
+.icon-windows:before {
+  content: '\e814'; }
+
+/* '' */
+.icon-lock:before {
+  content: '\e815'; }
+
+/* '' */
 .cb input[type="checkbox"] {
   opacity: 0;
   z-index: 10;
@@ -2670,7 +2862,8 @@ input[type="button"].btn-block {
 
 .cb {
   margin: 0;
-  min-height: 20px; }
+  height: 20px;
+  min-width: 20px; }
 
 .cb + .cb {
   margin-top: 0; }
@@ -2711,7 +2904,6 @@ input[type="button"].btn-block {
 .cb__label::before,
 .cb__label::after {
   content: "";
-  top: 2px;
   text-align: center;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -3058,18 +3250,20 @@ input[type="button"].btn-block {
 .list__col {
   display: table-cell;
   vertical-align: middle;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
+  padding: 18px 0 18px 15px;
   border-top: 1px solid #E2E2E2;
   float: none; }
+
+.list__header-col:last-child,
+.list__col:last-child {
+  padding-right: 15px; }
 
 .list__header-col a {
   color: #444;
   font-size: 0.95em;
   text-decoration: none; }
 .list__header-col[data-sort="asc"] a::after, .list__header-col[data-sort="desc"] a::after {
-  font-size: 0.5em;
+  font-size: 0.8em;
   vertical-align: middle; }
 .list__header-col[data-sort="asc"] a::after {
   content: "\e80c"; }
@@ -3077,10 +3271,11 @@ input[type="button"].btn-block {
   content: "\e80d"; }
 
 .list__col-cb {
-  width: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center; }
+  width: 45px;
+  padding-left: 20px; }
+
+.list__col-id {
+  width: 65px; }
 
 .list__sorting {
   text-align: right; }
@@ -3089,15 +3284,13 @@ input[type="button"].btn-block {
       display: none; } }
 
 .list__sorting-label {
-  color: #3CA9D0; }
+  color: #3CA9D0;
+  font-weight: 600; }
 
 .list__item {
   -webkit-transition: background 0.25s;
   -o-transition: background 0.25s;
   transition: background 0.25s; }
-
-.list__col:last-child {
-  padding-right: 15px; }
 
 .list__item:last-child .list__col {
   border-bottom: 1px solid #E2E2E2; }
@@ -3115,7 +3308,7 @@ input[type="button"].btn-block {
   font-size: 1.3em; }
 
 .list__item-actions {
-  width: 35%;
+  width: 85px;
   text-align: right; }
   .list__item-actions > li {
     display: inline-block; }
@@ -3128,7 +3321,8 @@ input[type="button"].btn-block {
       cursor: pointer; }
 
 .list__item-overflow > .dropdown-toggle {
-  color: #444; }
+  color: #444;
+  font-size: 1.3em; }
 
 .list__item-title {
   display: block;
@@ -3139,196 +3333,99 @@ input[type="button"].btn-block {
   font-size: 0.85em;
   color: #999999; }
 
-@font-face {
-  font-family: 'icons';
-  src: url("../fonts/icons/icons.eot?65614587");
-  src: url("../fonts/icons/icons.eot?65614587#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2?65614587") format("woff2"), url("../fonts/icons/icons.woff?65614587") format("woff"), url("../fonts/icons/icons.ttf?65614587") format("truetype"), url("../fonts/icons/icons.svg?65614587#icons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'icons';
-    src: url('../font/icons.svg?65614587#icons') format('svg');
-  }
-}
-*/
-.icon::before, .cb-switch__icon::before,
-.icon::after,
-.cb-switch__icon::after,
-.list__header-col[data-sort="asc"] a::after,
-.list__header-col[data-sort="desc"] a::after,
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "icons";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
+.printer-id {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 1.1em;
+  font-weight: 600;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+  line-height: 47px; }
 
-.icon-ok:before {
+.printer-id::before {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  height: 16px;
+  width: 16px;
+  font-family: "icons";
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid transparent;
+  line-height: 1;
+  font-size: 8px;
+  line-height: 1.8; }
+  @media screen and (min-width: 768px) {
+    .printer-id::before {
+      display: none; } }
+
+.printer-id--online,
+.printer-id--online::before {
+  border-color: #35BA70;
+  color: #289D6B; }
+
+.printer-id--offline,
+.printer-id--offline::before {
+  border-color: #E94D4C;
+  color: #E94D4C; }
+
+.printer-id--warning,
+.printer-id--warning::before {
+  border-color: #F29400;
+  color: #F29400; }
+
+.printer-id--online::before {
   content: '\e800'; }
 
-/* '' */
-.icon-cancel:before {
+.printer-id--offline::before {
   content: '\e801'; }
 
-/* '' */
-.icon-menu-toggle:before {
-  content: '\e802'; }
+.printer-id--warning::before {
+  content: '\e801'; }
 
-/* '' */
-.icon-history:before {
-  content: '\e803'; }
+.status-icon {
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  font-family: "icons";
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid transparent;
+  text-align: center; }
+  .status-icon::before {
+    margin: 0;
+    line-height: 1.9em;
+    vertical-align: middle; }
 
-/* '' */
-.icon-printer:before {
-  content: '\e804'; }
+.status-icon--sm {
+  font-size: 8px; }
 
-/* '' */
-.icon-user:before {
-  content: '\e805'; }
+.status-icon--md {
+  font-size: 10px; }
 
-/* '' */
-.icon-dashboard:before {
-  content: '\e806'; }
+.status-icon--lg {
+  font-size: 1em; }
 
-/* '' */
-.icon-drivers:before {
-  content: '\e807'; }
+.status-icon--online {
+  border-color: #35BA70;
+  color: #289D6B; }
+  .status-icon--online::before {
+    content: '\e800'; }
 
-/* '' */
-.icon-cog:before {
-  content: '\e808'; }
+.status-icon--offline {
+  border-color: #E94D4C;
+  color: #E94D4C; }
+  .status-icon--offline::before {
+    content: '\e801'; }
 
-/* '' */
-.icon-diagnostics:before {
-  content: '\e809'; }
-
-/* '' */
-.icon-overflow-menu:before {
-  content: '\e80a'; }
-
-/* '' */
-.icon-overflow-menu-2:before {
-  content: '\e80b'; }
-
-/* '' */
-.icon-sort-down:before {
-  content: '\e80c'; }
-
-/* '' */
-.icon-sort-up:before {
-  content: '\e80d'; }
-
-/* '' */
-.icon-add:before {
-  content: '\e80e'; }
-
-/* '' */
-.icon-refresh:before {
-  content: '\e80f'; }
-
-/* '' */
-.icon-search:before {
-  content: '\e810'; }
-
-/* '' */
-.icon-delete:before {
-  content: '\e811'; }
-
-/* '' */
-.icon-lock-open:before {
-  content: '\e812'; }
-
-/* '' */
-.icon-apple:before {
-  content: '\e813'; }
-
-/* '' */
-.icon-windows:before {
-  content: '\e814'; }
-
-/* '' */
-.icon-lock:before {
-  content: '\e815'; }
-
-/* '' */
-.thin {
-  font-weight: 100; }
-
-.light {
-  font-weight: 300; }
-
-.medium {
-  font-weight: 500; }
-
-.bold {
-  font-weight: 700; }
-
-.heavy {
-  font-weight: 900; }
-
-.page-title {
-  font-size: 32px;
-  font-weight: 300; }
-
-.page-subtitle {
-  font-size: 20px;
-  font-weight: 300; }
-
-hr {
-  margin-bottom: 3em;
-  border-width: 3px;
-  max-width: 30px;
-  border-color: rgba(0, 0, 0, 0.2); }
-  hr:last-child {
-    margin-bottom: 0; }
-
-.separator-thin {
-  border-width: 1px;
-  max-width: 60px; }
-
-@media (min-width: 768px) {
-  .separator-lg {
-    border-width: 8px;
-    max-width: 60px; } }
-
-.separator-full {
-  max-width: none; }
-
-.separator-left {
-  margin-left: 0; }
-
-.separator-right {
-  margin-right: 0; }
-
-.separator-white {
-  border-color: white; }
-
-.separator-white-faded {
-  border-color: rgba(255, 255, 255, 0.3); }
+.status-icon--warning {
+  border-color: #F29400;
+  color: #F29400; }
+  .status-icon--warning::before {
+    content: '\e801'; }
 
 .mt0 {
   margin-top: 0; }
@@ -3486,6 +3583,10 @@ body {
 @media screen and (max-width: 767px) {
   .page-header {
     display: none; } }
+
+@media (max-width: 991px) {
+  .container {
+    width: auto; } }
 
 @media screen and (max-width: 767px) {
   .section--separate {

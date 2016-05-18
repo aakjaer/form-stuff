@@ -10,10 +10,6 @@ body {
 	}
 }
 
-header[role="banner"] {
-
-}
-
 main {
 	@media screen and (max-width: $grid-float-breakpoint-max) {
 		background: #F4F4F4;
@@ -23,6 +19,12 @@ main {
 .page-header {
 	@media screen and (max-width: $grid-float-breakpoint-max) {
 		display: none;
+	}
+}
+
+.container {
+	@media (max-width: $screen-sm-max) {
+	    width: auto;
 	}
 }
 

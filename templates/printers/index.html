@@ -6,269 +6,93 @@ include: list-checkboxes
 
 {%  include page-header.html %}
 
-<div class="section--separate">
-	<nav class="tab-menu" role="tablist">
-		<div class="container">
-			<ul>
-				<li class="tab-menu__tab" role="presentation">
-					<a href="#setup" aria-controls="setup" role="tab" data-toggle="tab">
-						<i class="tab-menu__icon icon-cog"></i> 
-						<span class="tab-menu__tab-label">Setup</span>
-					</a>
-				</li>
-				<li class="tab-menu__tab" role="presentation">
-					<a href="#history" aria-controls="history" role="tab" data-toggle="tab">
-						<i class="tab-menu__icon icon-history"></i>
-						<span class="tab-menu__tab-label">History</span>
-					</a>
-				</li>
-				<li class="tab-menu__tab active" role="presentation">
-					<a href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">
-						<i class="tab-menu__icon icon-drivers"></i> 
-						<span class="tab-menu__tab-label">Drivers</span>
-					</a>
-				</li>
-				<li class="tab-menu__tab" role="presentation">
-					<a href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">
-						<i class="tab-menu__icon icon-diagnostics"></i> 
-						<span class="tab-menu__tab-label">Dianostics</span>
-					</a>
-				</li>
-				<li class="tab-menu__tab tab-menu__overflow-tab dropdown" role="presentation">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-						<i class="tab-menu__icon icon-overflow-menu-2"></i>
-					</a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 1</a></li>
-						<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 2</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</div>
-
 <div class="main-content">
-	<div class="tab-content container">
-		<!-- setup content  -->
-		<div role="tabpanel" class="tab-pane" id="setup">
+	<div class="container">
+		<ul class="page-actions">
+			<li><button><i class="icon-add"></i></button></li>
+			<li><button><i class="icon-delete"></i></button></li>
+			<li><button><i class="icon-search"></i></button></li>
+			<li><button><i class="icon-refresh"></i></button></li>
+		</ul>
 
-			<form class="form--fixed">
-
-				<!-- status section -->
-				<fieldset class="form-section form-section--inline form-section--separate">
-					<h4 class="form-header hidden-xs">
-						Status
-					</h4>
-					<div class="row">
-						<div class="form-group col-sm-6">
-							<div class="cb-switch">
-								<input id="switch-1" type="checkbox" checked="checked" />
-								<label class="cb-switch__label" for="switch-1">
-									Active
-									<span class="cb-switch__icon"></span>
-								</label>
-							</div>
-						</div>
+		<div class="list">
+			<!-- list header -->
+			<header class="list__header">
+				<div class="list__header-col list__col-cb">
+					<div class="cb">
+						<input id="checkbox-all" type="checkbox" />
+						<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
 					</div>
-				</fieldset>
+				</div>
+				<div class="list__col list__col-id hidden-xs text-center">
+					ID
+				</div>
+				<div class="list__header-col hidden-xs" data-sort="asc">
+					<a>Printer name</a>
+				</div>
+				<div class="list__header-col col-sm-1 hidden-xs text-center" data-sort="">
+					<a>Status</a>
+				</div>
+				<div class="list__header-col col-sm-4 hidden-xs" data-sort="">
+					<a>Location</a>
+				</div>
+				<div class="list__header-col list__item-actions"></div>
 
-
-				<!-- name section -->
-				<fieldset class="form-section form-section--inline">
-					<h4 class="form-header hidden-xs">
-						Name
-					</h4>
-					<div class="row">
-						<div class="form-group col-sm-6">
-							<label class="control-label" for="">Printer name</label>
-							<div class="input-group">
-								<input type="text" class="form-control text-lg text-semi" value="HP Officejet Color X555" />
-							</div>
-						</div>
+				<!-- sorting for small displays -->
+				<div class="list__sorting list__header-col">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+							Sort by <span class="list__sorting-label">Printer name</span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#">Printer name</a></li>
+							<li><a href="#">Status</a></li>
+							<li><a href="#">Location</a></li>
+						</ul>
 					</div>
-				</fieldset>
+				</div>
+			</header>
+			<!-- end list header /-->
 
-
-				<!-- location section -->
-				<fieldset class="form-section form-section--inline">
-					<h4 class="form-header hidden-xs">
-						Location
-					</h4>
-					<div class="row">
-						<div class="form-group col-sm-6">
-							<label class="control-label" for="">Location description</label>
-							<div class="input-group">
-								<input type="text" class="form-control text-lg text-semi" value="HP Officejet Color X555" />
-							</div>
-						</div>
-						<div class="form-group col-sm-12">
-							<div class="cb-switch">
-								<input id="cb-switch-4" type="checkbox" />
-								<label class="cb-switch__label" for="cb-switch-4">
-									Enable geolocation
-									<span class="cb-switch__icon"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-				</fieldset>
-
-
-				<!-- options section -->
-				<fieldset class="form-section form-section--inline">
-					<h4 class="form-header">
-						Options
-					</h4>
-					<div class="row">
-						<div class="form-group col-sm-12">
-							<div class="cb-switch">
-								<input id="switch-2" type="checkbox" checked="checked" />
-								<label class="cb-switch__label" for="switch-2">
-									Print in black by default
-									<span class="cb-switch__icon"></span>
-								</label>
-							</div>
-						</div>
-
-						<div class="form-group col-sm-12">
-							<div class="cb-switch">
-								<input id="cb-switch-3" type="checkbox" />
-								<label class="cb-switch__label" for="cb-switch-3">
-									Print 2-sided by default
-									<span class="cb-switch__icon"></span>
-								</label>
-							</div>
-						</div>
-
-						<div class="form-group col-sm-12">
-							<div class="cb-switch">
-								<input id="cb-switch-5" type="checkbox" />
-								<label class="cb-switch__label" for="cb-switch-5">
-									Auto-add printer for everyone
-									<span class="cb-switch__icon"></span>
-								</label>
-							</div>
-						</div>
-					</div>
-				</fieldset>
-
-				<!-- network section -->
-				<fieldset class="form-section form-section--inline">
-					<h4 class="form-header">
-						Network
-					</h4>
-
-					<div class="row">
-						<div class="form-group col-xs-6 col-sm-3">Model</div>
-						<div class="form-group col-xs-6 col-sm-9">HP Officejet Color X555 </div>
-					</div>
-					<div class="row">
-						<div class="form-group col-xs-6 col-sm-3">MAC address</div>
-						<div class="form-group col-xs-6 col-sm-9">F0921C637CA2</div>
-					</div>
-					<div class="row">
-						<div class="form-group col-xs-6 col-sm-3">Printer address</div>
-						<div class="form-group col-xs-6 col-sm-9"><a href="#">npi637ca2</a></div>
-					</div>
-				</fieldset>
-
-				<fieldset class="form-actions form-actions--fixed">
-					<a class="btn btn-primary">Save changes</a>
-				</fieldset>
-			</form>
-		</div>
-
-
-		<!-- history content -->
-		<div role="tabpanel" class="tab-pane" id="history">
-			History
-		</div>
-
-
-		<!-- //////////////////////////////////////////////////////
-
-			drivers content 
-		
-		/////////////////////////////////////////////////////// -->
-
-		<div role="tabpanel" class="tab-pane active" id="drivers">
-			
-			<ul class="page-actions">
-				<li><button><i class="icon-add"></i></button></li>
-				<li><button><i class="icon-delete"></i></button></li>
-				<li><button><i class="icon-search"></i></button></li>
-				<li><button><i class="icon-refresh"></i></button></li>
-			</ul>
-
-			<div class="list">
-				<!-- list header -->
-				<header class="list__header">
-					<div class="list__header-col list__col-cb">
+			<!-- list item -->
+			{% for printer in site.data.content.printers %}
+				<div class="list__item{% if printer.active %} list__item--active{% endif %}">
+					<div class="list__col list__col-cb">
 						<div class="cb">
-							<input id="checkbox-all" type="checkbox" />
-							<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
+							<input id="checkbox-{{ forloop.index }}" type="checkbox" {% if printer.active %}checked="checked"{% endif %} />
+							<label class="cb__label cb__label--hidden" for="checkbox-{{ forloop.index }}"></label>
 						</div>
 					</div>
-					<div class="list__header-col hidden-xs" data-sort="">
-						<a>Driver name</a>
+					<div class="list__col list__col-id">
+						<div class="printer-id printer-id--{{ printer.status }}">
+							{{ printer.id }}
+						</div>
 					</div>
-					<div class="list__header-col list__item-actions"></div>
-
-					<!-- sorting for small displays -->
-					<div class="list__sorting list__header-col">
-						<div class="dropdown">
+					<div class="list__col">
+						<b class="list__item-title">{{ printer.title }}</b>
+						{% if printer.locaition != "" %}<span class="list__item-description">{{ printer.location }}</span>{% endif %}
+					</div>
+					<div class="list__col col-sm-1 hidden-xs text-center">
+						<div class="status-icon status-icon--md status-icon--{{ printer.status }}"></div>
+					</div>
+					<div class="list__col col-sm-4 hidden-xs">
+						{{ printer.location }}
+					</div>
+					<div class="list__col list__item-actions">
+						<div class="list__item-overflow dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								Sort by <span class="list__sorting-label">Driver name</span> <span class="caret"></span>
+								<i class="icon-overflow-menu"></i>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Driver name</a></li>
-								<li><a href="#">OS</a></li>
+								<li><a href="#">Info</a></li>
+								<li><a href="#">Modify</a></li>
+								<li><a href="#" aria-controls="">Delete</a></li>
 							</ul>
 						</div>
 					</div>
-				</header>
-				<!-- end list header /-->
-
-				<!-- list item -->
-				{% for driver in site.data.content.drivers %}
-					<div class="list__item{% if driver.active %} list__item--active{% endif %}">
-						<div class="list__col list__col-cb">
-							<div class="cb">
-								<input id="checkbox-{{ forloop.index }}" type="checkbox" {% if driver.active %}checked="checked"{% endif %} />
-								<label class="cb__label cb__label--hidden" for="checkbox-{{ forloop.index }}"></label>
-							</div>
-						</div>
-						<div class="list__col">
-							<b class="list__item-title">{{ driver.title }}</b>
-							<span class="list__item-description">{{ driver.printer }}</span>
-						</div>
-						<div class="list__col list__item-actions">
-							<div class="list__item-overflow dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#">Info</a></li>
-									<li><a href="#">Modify</a></li>
-									<li><a href="#" aria-controls="">Delete</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				{% endfor %}	
-				<!-- list item end /-->
-			</div>
-		</div>
-
-		<!-- dianostics content -->
-		<div role="tabpanel" class="tab-pane" id="dianostics">
-			Dianostics
-		</div>
-
-		<!-- test content -->
-		<div role="tabpanel" class="tab-pane" id="overflow">
-			Overflow content
+				</div>
+			{% endfor %}	
+			<!-- list item end /-->
 		</div>
 	</div>
 </div>

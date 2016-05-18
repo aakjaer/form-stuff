@@ -1,0 +1,116 @@
+///////////////////////////////////////////////////////////////
+
+// Printer id boxes - shows printer status and ID
+
+///////////////////////////////////////////////////////////////
+
+@import "variables";
+
+
+///////////////////////////////////////////////////////////////
+
+// outer box and text
+.printer-id {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background: #fff;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	font-size: 1.1em;
+	font-weight: 600;
+	text-align: center;
+	line-height: 47px;
+}
+
+// status icon
+.printer-id::before {
+	position: absolute;
+	bottom: -6px;
+	right: -6px;
+	height: 16px;
+	width: 16px;
+	font-family: $icon-font;
+	border-radius: 50%;
+	background: #fff;
+	border: 1px solid transparent;
+	line-height: 1;
+	font-size: 8px;
+	line-height: 1.8;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		display: none;
+	}
+}
+
+.printer-id--online,
+.printer-id--online::before {
+	border-color: $brand-green;
+	color: $brand-green-dark;
+}
+
+.printer-id--offline,
+.printer-id--offline::before {
+	border-color: $brand-red;
+	color: $brand-red;
+}
+
+.printer-id--warning,
+.printer-id--warning::before {
+	border-color: $brand-orange;
+	color: $brand-orange;
+}
+
+.printer-id--online::before 		{ content: '\e800'; }
+.printer-id--offline::before 		{ content: '\e801'; }
+.printer-id--warning::before 		{ content: '\e801'; }
+
+// icons 
+.status-icon {
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	font-family: $icon-font;
+	border-radius: 50%;
+	background: #fff;
+	border: 1px solid transparent;
+	text-align: center;
+	@extend .icon;
+
+	&::before {
+		margin: 0;
+		line-height: 1.9em;
+		vertical-align: middle;
+	}
+}
+
+// size variants
+.status-icon--sm 	{ font-size: 8px; }
+.status-icon--md 	{ font-size: 10px; }
+.status-icon--lg 	{ font-size: 1em; }
+
+
+// status variants
+.status-icon--online {
+	border-color: $brand-green;
+	color: $brand-green-dark;
+
+	&::before { content: '\e800'; }
+}
+
+.status-icon--offline {
+	border-color: $brand-red;
+	color: $brand-red;
+
+	&::before { content: '\e801'; }
+}
+
+.status-icon--warning {
+	border-color: $brand-orange;
+	color: $brand-orange;
+
+	&::before { content: '\e801'; }
+}
+
+
+
