@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>status offline lg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="10" cy="10" r="10"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="status-offline-lg">
+            <use id="Oval-31" stroke="#E94D4B" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <path d="M10.1013979,9.04073773 L7.06066017,6 L6,7.06066017 L9.04073773,10.1013979 L6,13.1421356 L7.06066017,14.2027958 L10.1013979,11.1620581 L13.1421356,14.2027958 L14.2027958,13.1421356 L11.1620581,10.1013979 L14.2027958,7.06066017 L13.1421356,6 L10.1013979,9.04073773 Z" id="Combined-Shape" fill="#E94D4B"></path>
+        </g>
+    </g>
+</svg>

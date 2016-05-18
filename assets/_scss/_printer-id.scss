@@ -39,7 +39,7 @@
 	line-height: 1.8;
 
 	@media screen and (min-width: $grid-float-breakpoint) {
-		display: none;
+		// display: none;
 	}
 }
 
@@ -68,48 +68,30 @@
 // icons 
 .status-icon {
 	display: inline-block;
-	height: 2em;
-	width: 2em;
-	font-family: $icon-font;
-	border-radius: 50%;
-	background: #fff;
-	border: 1px solid transparent;
-	text-align: center;
-	@extend .icon;
-
-	&::before {
-		margin: 0;
-		line-height: 1.9em;
-		vertical-align: middle;
-	}
+	height: 20px;
+	width: 20px;
+	background-size: 20px auto;
+	background-repeat: no-repeat;
 }
 
 // size variants
-.status-icon--sm 	{ font-size: 8px; }
-.status-icon--md 	{ font-size: 10px; }
+.status-icon--sm 	{ background-size: 16px auto; }
 .status-icon--lg 	{ font-size: 1em; }
 
 
-// status variants
+// online
 .status-icon--online {
-	border-color: $brand-green;
-	color: $brand-green-dark;
-
-	&::before { content: '\e800'; }
+	background-image: url(../images/icons/status-online.svg);
 }
 
+// offline
 .status-icon--offline {
-	border-color: $brand-red;
-	color: $brand-red;
-
-	&::before { content: '\e801'; }
+	background-image: url(../images/icons/status-offline.svg);
 }
 
+// warning
 .status-icon--warning {
-	border-color: $brand-orange;
-	color: $brand-orange;
-
-	&::before { content: '\e801'; }
+	background-image: url(../images/icons/status-warning.svg);
 }
 
 

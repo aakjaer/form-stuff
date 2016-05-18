@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>status warning lg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10,0 C15.5397727,0 20,4.48863636 20,10 C20,15.5397727 15.5113636,20 10,20 C4.46022727,20 0,15.5113636 0,10 C0,4.46022727 4.48863636,0 10,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="status-warning-lg">
+            <use id="Shape" stroke="#F29400" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <path d="M9.09,5.938 L9.039,4 L11.011,4 L10.943,5.938 L10.671,11.735 L9.362,11.735 L9.09,5.938 Z M8.75,14.268 C8.75,13.8826647 8.87183212,13.5653346 9.1155,13.316 C9.35916789,13.0666654 9.66233152,12.942 10.025,12.942 C10.3876685,12.942 10.6879988,13.0666654 10.926,13.316 C11.1640012,13.5653346 11.283,13.8826647 11.283,14.268 C11.283,14.6533353 11.1640012,14.9706654 10.926,15.22 C10.6879988,15.4693346 10.3876685,15.594 10.025,15.594 C9.66233152,15.594 9.35916789,15.4693346 9.1155,15.22 C8.87183212,14.9706654 8.75,14.6533353 8.75,14.268 L8.75,14.268 Z" id="!" fill="#F29400"></path>
+        </g>
+    </g>
+</svg>

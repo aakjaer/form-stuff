@@ -2730,12 +2730,11 @@ hr {
   }
 }
 */
-.icon::before, .cb-switch__icon::before, .status-icon::before,
+.icon::before, .cb-switch__icon::before,
 .icon::after,
 .cb-switch__icon::after,
 .list__header-col[data-sort="asc"] a::after,
 .list__header-col[data-sort="desc"] a::after,
-.status-icon::after,
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "icons";
   font-style: normal;
@@ -3358,9 +3357,6 @@ hr {
   line-height: 1;
   font-size: 8px;
   line-height: 1.8; }
-  @media screen and (min-width: 768px) {
-    .printer-id::before {
-      display: none; } }
 
 .printer-id--online,
 .printer-id--online::before {
@@ -3388,44 +3384,25 @@ hr {
 
 .status-icon {
   display: inline-block;
-  height: 2em;
-  width: 2em;
-  font-family: "icons";
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid transparent;
-  text-align: center; }
-  .status-icon::before {
-    margin: 0;
-    line-height: 1.9em;
-    vertical-align: middle; }
+  height: 20px;
+  width: 20px;
+  background-size: 20px auto;
+  background-repeat: no-repeat; }
 
 .status-icon--sm {
-  font-size: 8px; }
-
-.status-icon--md {
-  font-size: 10px; }
+  background-size: 16px auto; }
 
 .status-icon--lg {
   font-size: 1em; }
 
 .status-icon--online {
-  border-color: #35BA70;
-  color: #289D6B; }
-  .status-icon--online::before {
-    content: '\e800'; }
+  background-image: url(../images/icons/status-online.svg); }
 
 .status-icon--offline {
-  border-color: #E94D4C;
-  color: #E94D4C; }
-  .status-icon--offline::before {
-    content: '\e801'; }
+  background-image: url(../images/icons/status-offline.svg); }
 
 .status-icon--warning {
-  border-color: #F29400;
-  color: #F29400; }
-  .status-icon--warning::before {
-    content: '\e801'; }
+  background-image: url(../images/icons/status-warning.svg); }
 
 .mt0 {
   margin-top: 0; }
