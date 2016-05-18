@@ -23,47 +23,44 @@
 	line-height: 47px;
 }
 
-// status icon
-.printer-id::before {
-	position: absolute;
-	bottom: -6px;
-	right: -6px;
-	height: 16px;
-	width: 16px;
-	font-family: $icon-font;
-	border-radius: 50%;
-	background: #fff;
-	border: 1px solid transparent;
-	line-height: 1;
-	font-size: 8px;
-	line-height: 1.8;
-
-	@media screen and (min-width: $grid-float-breakpoint) {
-		// display: none;
-	}
-}
-
-.printer-id--online,
-.printer-id--online::before {
+.printer-id--online {
 	border-color: $brand-green;
 	color: $brand-green-dark;
 }
 
-.printer-id--offline,
-.printer-id--offline::before {
+.printer-id--offline {
 	border-color: $brand-red;
 	color: $brand-red;
 }
 
-.printer-id--warning,
-.printer-id--warning::before {
+.printer-id--warning {
 	border-color: $brand-orange;
 	color: $brand-orange;
 }
 
-.printer-id--online::before 		{ content: '\e800'; }
-.printer-id--offline::before 		{ content: '\e801'; }
-.printer-id--warning::before 		{ content: '\e801'; }
+// status icon
+.printer-id__icon {
+	@extend .status-icon;
+	@extend .status-icon--sm;
+	position: absolute;
+	bottom: -6px;
+	right: -6px;
+
+	@media screen and (min-width: $grid-float-breakpoint) {
+		display: none !important;
+	}
+}
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+
+// Status icons (online, offline, warning)
+
+///////////////////////////////////////////////////////////////
+
 
 // icons 
 .status-icon {
@@ -75,8 +72,17 @@
 }
 
 // size variants
-.status-icon--sm 	{ background-size: 16px auto; }
-.status-icon--lg 	{ font-size: 1em; }
+.status-icon--sm { 
+	height: 16px; 
+	width: 16px;
+	background-size: 16px auto; 
+}
+
+.status-icon--lg { 
+	height: 24px; 
+	width: 24px;
+	background-size: 24px auto;
+}
 
 
 // online
