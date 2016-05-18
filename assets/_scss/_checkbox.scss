@@ -6,9 +6,7 @@
 
 @import "variables";
 
-
 $checkbox-size: 20px;
-$checkbox-icon: $icon-ok;
 
 ///////////////////////////////////////////////////////////////
 
@@ -87,7 +85,7 @@ $checkbox-icon: $icon-ok;
 
 // check icon
 .cb__label::after {
-    content: $checkbox-icon;
+    content: $icon-ok;
     font-family: $icon-font;
     opacity: 0;
     line-height: $checkbox-size;

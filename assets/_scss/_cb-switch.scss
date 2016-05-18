@@ -19,6 +19,7 @@
 
 
 @import "variables";
+@import "icons";
 
 // proportions
 $switch-width: 55px;
@@ -26,15 +27,7 @@ $switch-height: 30px;
 $switch-padding: 3px;
 $switch-knob-size: $switch-height - ($switch-padding * 2);
 
-
-// font icon values
-$cb-switch-icon-font: $icon-font; // use global name
-$swich-icon-on: $icon-ok;
-$swich-icon-off: $icon-close;
-
-
 $checkbox-size: 20px;
-$checkbox-icon: $icon-ok;
 
 ///////////////////////////////////////////////////////////////
 
@@ -62,9 +55,26 @@ $checkbox-icon: $icon-ok;
     cursor: pointer;
 }
 
-.cb-switch__icon {
-    @extend .icon;
+.cb-switch__label::after {
+    @extend .icon-ok:before;
 }
+
+// cant do this inside the mediaqueries - needs a loving hand
+.cb-switch__icon {
+    // @extend .icon;
+    display: none;
+
+    &::before {
+        @extend .icon-ok:before;
+    }
+
+    &::after {
+        @extend .icon-close:before;
+    }
+}
+
+
+
 
 
 ///////////////////////////////////////
@@ -151,6 +161,7 @@ $checkbox-icon: $icon-ok;
 
         // on/off icon container
         .cb-switch__icon {
+            display: block;
 
             &::before,
             &::after {
@@ -163,7 +174,6 @@ $checkbox-icon: $icon-ok;
 
             // on icon
             &::before {
-                content: $swich-icon-on;
                 opacity: 0;
                 left: 15%;
                 @include translate(75%,-50%);
@@ -172,7 +182,6 @@ $checkbox-icon: $icon-ok;
 
             // off icon
             &::after {
-                content: $swich-icon-off;
                 right: 15%;
                 @include translate(0,-50%);
                 color: $color-2;
@@ -276,7 +285,6 @@ $checkbox-icon: $icon-ok;
 
     .cb-switch__label::before,
     .cb-switch__label::after {
-        content: "";
         top: 2px;
         text-align: center;
         @include transition(all 0.2s);
@@ -284,6 +292,7 @@ $checkbox-icon: $icon-ok;
 
     // checkbox background
     .cb-switch__label::before {
+        content: "";
         background: #fff;
         border: 1px solid $input-border;
         will-change: transform;
@@ -291,8 +300,7 @@ $checkbox-icon: $icon-ok;
 
     // check icon
     .cb-switch__label::after {
-        content: $checkbox-icon;
-        font-family: $cb-switch-icon-font;
+        font-family: $icon-font;
         opacity: 0;
         line-height: $checkbox-size;
         font-size: 0.75em;

@@ -38,33 +38,41 @@
 	<nav class="tab-menu" role="tablist">
 		<div class="container">
 			<ul>
-				<li class="tab-menu__tab active" role="presentation">
+				<li class="tab-menu__tab" role="presentation">
 					<a href="#setup" aria-controls="setup" role="tab" data-toggle="tab">
-						<i class="tab-menu__icon icon-cog"></i> 
-						<span class="tab-menu__tab-label">Setup</span>
+						<i class="tab-menu__icon icon-gear"></i> 
+						<span class="tab-menu__tab-label">
+							Setup
+						</span>
 					</a>
 				</li>
 				<li class="tab-menu__tab" role="presentation">
 					<a href="#history" aria-controls="history" role="tab" data-toggle="tab">
 						<i class="tab-menu__icon icon-history"></i>
-						<span class="tab-menu__tab-label">History</span>
+						<span class="tab-menu__tab-label">
+							History
+						</span>
 					</a>
 				</li>
-				<li class="tab-menu__tab" role="presentation">
+				<li class="tab-menu__tab active" role="presentation">
 					<a href="#drivers" aria-controls="drivers" role="tab" data-toggle="tab">
 						<i class="tab-menu__icon icon-drivers"></i> 
-						<span class="tab-menu__tab-label">Drivers</span>
+						<span class="tab-menu__tab-label">
+							Drivers
+						</span>
 					</a>
 				</li>
 				<li class="tab-menu__tab" role="presentation">
 					<a href="#dianostics" aria-controls="dianostics" role="tab" data-toggle="tab">
 						<i class="tab-menu__icon icon-diagnostics"></i> 
-						<span class="tab-menu__tab-label">Dianostics</span>
+						<span class="tab-menu__tab-label">
+							Dianostics
+						</span>
 					</a>
 				</li>
 				<li class="tab-menu__tab tab-menu__overflow-tab dropdown" role="presentation">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-						<i class="tab-menu__icon icon-overflow-menu-2"></i>
+						<i class="tab-menu__icon icon-overflow-vert"></i>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a href="#overflow" aria-controls="overflow" role="tab" data-toggle="tab">Overflow tab 1</a></li>
@@ -79,7 +87,7 @@
 <div class="main-content">
 	<div class="tab-content container">
 		<!-- setup content  -->
-		<div role="tabpanel" class="tab-pane  active" id="setup">
+		<div role="tabpanel" class="tab-pane" id="setup">
 
 			<form class="form--fixed">
 
@@ -222,178 +230,178 @@
 
 		<div role="tabpanel" class="tab-pane active" id="drivers">
 			
-
-			<table class="table hidden ">
-				<thead>
-					<th></th>
-				</thead>
-				<tbody>
+			<div class="list">
+				<table class="table">
+					<thead>
+						<th></th>
+					</thead>
+					<tbody>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-windows"></i>
+								</td>
+								<td>
+									<b class="list__item-title">Windows 10 x32</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-windows"></i>
+								</td>
+								<td>
+									<b class="list__item-title">Windows 10 x64</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock-open"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-windows"></i>
+								</td>
+								<td>
+									<b class="list__item-title">Windows 10 x64</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-apple"></i>
+								</td>
+								<td>
+									<b class="list__item-title">OS X 10.11</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-apple"></i>
+								</td>
+								<td>
+									<b class="list__item-title">OS X 10.11</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							
+							<tr>
+								<td class="list__item-icon">
+									<i class="icon-apple"></i>
+								</td>
+								<td>
+									<b class="list__item-title">OS X 10.11</b>
+									<span class="list__item-description">HP Officejet Color X555</span>
+								</td>
+								<td>
+									<ul class="list__item-actions">
+										<li>
+											<a><i class="icon-lock"></i></a>
+										</li>
+										<li class="list__item-overflow dropdown">
+											<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+												<i class="icon-overflow-vert"></i>
+											</a>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Info</a></li>
+												<li><a href="#">Modify</a></li>
+												<li><a href="#" aria-controls="">Delete</a></li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
 						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-windows"></i>
-							</td>
-							<td>
-								<b class="list__item-title">Windows 10 x32</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-windows"></i>
-							</td>
-							<td>
-								<b class="list__item-title">Windows 10 x64</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock-open"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-windows"></i>
-							</td>
-							<td>
-								<b class="list__item-title">Windows 10 x64</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-apple"></i>
-							</td>
-							<td>
-								<b class="list__item-title">OS X 10.11</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-apple"></i>
-							</td>
-							<td>
-								<b class="list__item-title">OS X 10.11</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						
-						<tr>
-							<td class="list__item-icon">
-								<i class="icon-apple"></i>
-							</td>
-							<td>
-								<b class="list__item-title">OS X 10.11</b>
-								<span class="list__item-description">HP Officejet Color X555</span>
-							</td>
-							<td>
-								<ul class="list__item-actions">
-									<li>
-										<a><i class="icon-lock"></i></a>
-									</li>
-									<li class="list__item-overflow dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-											<i class="icon-overflow-menu"></i>
-										</a>
-										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#">Info</a></li>
-											<li><a href="#">Modify</a></li>
-											<li><a href="#" aria-controls="">Delete</a></li>
-										</ul>
-									</li>
-								</ul>
-							</td>
-						</tr>
-					
-				</tbody>
-			</table>
-
+					</tbody>
+				</table>
+			</div>
 
 
 			<div class="list">
@@ -413,7 +421,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
@@ -438,7 +446,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
@@ -463,7 +471,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
@@ -488,7 +496,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
@@ -513,7 +521,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
@@ -538,7 +546,7 @@
 							</li>
 							<li class="list__item-overflow dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-									<i class="icon-overflow-menu"></i>
+									<i class="icon-overflow-vert"></i>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-right">
 									<li><a href="#">Info</a></li>
