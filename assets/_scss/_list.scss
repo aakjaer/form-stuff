@@ -4,6 +4,9 @@
 
 ///////////////////////////////////////
 
+$list-icon-asc: "\e80b";
+$list-icon-desc: "\e80a";
+
 // general styling 
 
 .list {
@@ -63,11 +66,11 @@
 	}
 
 	&[data-sort="asc"] a::after {
-		content: "\e80c";
+		content: $list-icon-asc;
 	}
 
 	&[data-sort="desc"] a::after {
-		content: "\e80d";
+		content: $list-icon-desc;
 	}
 }
 
@@ -135,7 +138,7 @@
 }
 
 .list__item-actions {
-	width: 85px;
+	width: 100px;
 	text-align: right;
 	@extend .list-unstyled;
 
@@ -144,7 +147,7 @@
 	}
 
 	> li + li {
-		margin-left: 10px;
+		margin-left: 5px;
 	}
 	
 	> li > a {

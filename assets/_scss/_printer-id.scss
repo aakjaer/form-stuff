@@ -17,10 +17,14 @@
 	background: #fff;
 	border: 1px solid transparent;
 	border-radius: 3px;
-	font-size: 1.1em;
 	font-weight: 600;
 	text-align: center;
 	line-height: 47px;
+}
+
+.printer-id--freedom {
+	border-color: $brand-blue;
+	color: $brand-blue;
 }
 
 .printer-id--online {
@@ -69,6 +73,7 @@
 	width: 20px;
 	background-size: 20px auto;
 	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
 // size variants
