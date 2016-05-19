@@ -16,84 +16,74 @@ include: list-checkboxes
 		</ul>
 
 		<div class="list">
-			<!-- list header -->
-			<header class="list__header">
-				<div class="list__header-col list__col-cb">
-					<div class="cb">
-						<input id="checkbox-all" type="checkbox" />
-						<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
-					</div>
-				</div>
-				<div class="list__col list__col-id hidden-xs text-center">
-					ID
-				</div>
-				<div class="list__header-col hidden-xs" data-sort="asc">
-					<a>Printer name</a>
-				</div>
-				<div class="list__header-col col-sm-1 hidden-xs text-center" data-sort="">
-					<a>Status</a>
-				</div>
-				<div class="list__header-col col-sm-4 hidden-xs" data-sort="">
-					<a>Location</a>
-				</div>
-				<div class="list__header-col list__item-actions"></div>
-
-				<!-- sorting for small displays -->
-				<div class="list__sorting list__header-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-							Sort by <span class="list__sorting-label">Printer name</span> <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#">Printer name</a></li>
-							<li><a href="#">Status</a></li>
-							<li><a href="#">Location</a></li>
-						</ul>
-					</div>
-				</div>
-			</header>
-			<!-- end list header /-->
-
-			<!-- list item -->
-			{% for printer in site.data.content.printers %}
-				<div class="list__item{% if printer.active %} list__item--active{% endif %}">
-					<div class="list__col list__col-cb">
+			<table>
+				<thead>
+					<th class="list__cb">
 						<div class="cb">
-							<input id="checkbox-{{ forloop.index }}" type="checkbox" {% if printer.active %}checked="checked"{% endif %} />
-							<label class="cb__label cb__label--hidden" for="checkbox-{{ forloop.index }}"></label>
+							<input id="checkbox-all" type="checkbox" />
+							<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
 						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--{{ printer.status }}">
-							{{ printer.id }}
-							<i class="printer-id__icon status-icon--{{ printer.status }}"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">{{ printer.title }}</b>
-						{% if printer.locaition != "" %}<span class="list__item-description">{{ printer.location }}</span>{% endif %}
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--{{ printer.status }}"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						{{ printer.location }}
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
+					</th>
+					<th class="list__printer-id hidden-xs"><a>ID</a></th>
+					<th class="hidden-xs" data-sort="asc"><a>Printer name</a></th>
+					<th class="hidden-xs"><a>Status</a></th>
+					<th class="hidden-xs"><a>Location</a></th>
+					<th class="hidden-xs"></th>
+					<th class="list__sorting visible-xs" colspan="3">
+						<!-- sorting for small displays -->
+						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
+								Sort by <span class="list__sorting-label">Printer name</span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
+								<li><a href="#">Printer name</a></li>
+								<li><a href="#">Status</a></li>
+								<li><a href="#">Location</a></li>
 							</ul>
 						</div>
-					</div>
-				</div>
-			{% endfor %}	
-			<!-- list item end /-->
+					</th>
+				</thead>
+				<tbody>
+					{% for printer in site.data.content.printers %}
+						<tr class="list__item{% if printer.active %} list__item--active{% endif %}">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-{{ forloop.index }}" type="checkbox" {% if printer.active %}checked="checked"{% endif %} />
+									<label class="cb__label cb__label--hidden" for="checkbox-{{ forloop.index }}"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--{{ printer.status }}">
+									{{ printer.id }}
+									<i class="printer-id__icon status-icon--{{ printer.status }}"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">{{ printer.title }}</b>
+								{% if printer.locaition != "" %}<span class="list__item-description">{{ printer.location }}</span>{% endif %}
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--{{ printer.status }}"></div>
+							</td>
+							<td class="hidden-xs">{{ printer.location }}</td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="{{ site.github.url }}/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>

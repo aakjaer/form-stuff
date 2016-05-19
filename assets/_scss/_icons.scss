@@ -12,19 +12,6 @@
 
 }
 
-[data-icon]:before {
-  font-family: "icons" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .icon,
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -39,14 +26,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-add:before {
   content: "\61";
 }
 .icon-apple:before {
   content: "\62";
-}
-.icon-close:before {
-  content: "\63";
 }
 .icon-dashboard:before {
   content: "\64";
@@ -78,9 +63,6 @@
 .icon-menu-toggle:before {
   content: "\6d";
 }
-.icon-ok:before {
-  content: "\6e";
-}
 .icon-overflow:before {
   content: "\6f";
 }
@@ -107,4 +89,13 @@
 }
 .icon-windows:before {
   content: "\77";
+}
+.icon-modify:before {
+  content: "\78";
+}
+.icon-ok:before {
+  content: "\6e";
+}
+.icon-close:before {
+  content: "\63";
 }

@@ -18,7 +18,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="/templates/printers/">Printers</a></li>
-                        <li><a href="/templates/printers/settings">Printer properties</a></li>
+                        <li><a href="/templates/printers/settings">Printer settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,7 +35,7 @@
 <script>
 	// TESTING ONLY!!! REMOVE FOR PRODUCTION !!!
 	$('.list .cb :checkbox').change(function(){
-		var listItem = $(this).closest('.list__item');
+		var listItem = $(this).closest('tr');
 		
 		listItem.toggleClass('list__item--active');
 	});

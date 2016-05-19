@@ -5,6 +5,9 @@
 ///////////////////////////////////////
 
 // general styling 
+th {
+	text-align: left;
+}
 
 .list {
 	margin-left: $grid-gutter-width / -2;
@@ -15,38 +18,28 @@
 	}
 }
 
-.list__header,
-.list__item {
-	display: table;
+.list table {
 	width: 100%;
+	max-width: 100%;
 }
 
-.list__header-col,
-.list__col {
-	display: table-cell;
-	vertical-align: middle;
-	padding: 18px 0 18px $grid-gutter-width / 2;
-	border-top: 1px solid $separator-color;
-
-	// reset bootstrap columns
-	float: none;
+.list th:first-child,
+.list td:first-child {
+	padding-left: 15px;
 }
 
-// lets see if we need this one
-.list__header-col:last-child,
-.list__col:last-child {
-	padding-right: $grid-gutter-width / 2;
+.list th:last-child,
+.list td:last-child {
+	padding-right: 15px;
 }
-
 
 
 ///////////////////////////////////////
-
 // header
-
 ///////////////////////////////////////
 
-.list__header-col {
+.list th {
+	font-weight: normal;
 
 	a {
 		color: $text-color;
@@ -72,13 +65,26 @@
 	}
 }
 
-.list__col-cb {
-	width: 45px;
-	padding-left: 20px;
+.list th,
+.list td {
+	padding: 18px 8px;
+	border-top: 1px solid $separator-color;
 }
 
-.list__col-id {
-	width: 65px;
+// fixed column widths
+.list .list__cb {
+	width: 50px;
+
+	// checkboxes need a bit of extra space (20px on each side) for people with fat thumbs :)
+	.cb {
+		margin-left: 5px;
+		margin-right: 4px; // standard padding is 2 x 8 + 4 = 20px 
+	}
+}
+
+.list__printer-id {
+	width: 50px;
+	text-align: center;
 }
 
 // a dropdown sorting replaces the list header on smaller devices to save space
@@ -96,9 +102,7 @@
 }
 
 ///////////////////////////////////////
-
 // list item
-
 ///////////////////////////////////////
 
 .list__item {
@@ -106,7 +110,7 @@
 }
 
 // last list item needs bottom border
-.list__item:last-child .list__col {
+.list__item:last-child td {
 	border-bottom: 1px solid $separator-color;
 }
 
@@ -115,17 +119,15 @@
 }
 
 // active list items have highlighted borders
-.list__item--active .list__col,
-.list__item--active + .list__item .list__col,
-.list__item--active:last-child .list__col {
+.list__item--active td,
+.list__item--active + .list__item td,
+.list__item--active:last-child td {
 	border-color: $separator-active-color;
 }
 
 
 ///////////////////////////////////////
-
 // list content
-
 ///////////////////////////////////////
 
 // inline actions are in a overflow/dropdown menu
@@ -145,16 +147,20 @@
 	}
 
 	> li + li {
-		margin-left: 5px;
+		margin-left: 20px;
 	}
 	
 	> li > a {
 		color: $text-color;
-		font-size: 1.3em;
+		text-decoration: none;
 
 		&:hover {
 			cursor: pointer;
 		}
+	}
+
+	i:before {
+		vertical-align: middle; 
 	}
 }
 
@@ -173,7 +179,3 @@
 	font-size: 0.85em;
 	color: $gray-light;
 }
-
-///
-
-.list-actions {}

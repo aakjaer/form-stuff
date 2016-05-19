@@ -10,6 +10,10 @@ body {
 	}
 }
 
+a:hover, a:focus {
+	text-decoration: none;
+}
+
 main {
 	@media screen and (max-width: $grid-float-breakpoint-max) {
 		background: #F4F4F4;

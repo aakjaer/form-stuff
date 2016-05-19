@@ -65,11 +65,13 @@ $checkbox-size: 20px;
     display: none;
 
     &::before {
-        @extend .icon-ok:before;
+        content: $icon-ok;
+        font-family: $icon-font;
     }
 
     &::after {
-        @extend .icon-close:before;
+        content: $icon-close;
+        font-family: $icon-font;
     }
 }
 

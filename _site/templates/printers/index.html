@@ -18,7 +18,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="/templates/printers/">Printers</a></li>
-                        <li><a href="/templates/printers/settings">Printer properties</a></li>
+                        <li><a href="/templates/printers/settings">Printer settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,232 +43,222 @@
 		</ul>
 
 		<div class="list">
-			<!-- list header -->
-			<header class="list__header">
-				<div class="list__header-col list__col-cb">
-					<div class="cb">
-						<input id="checkbox-all" type="checkbox" />
-						<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
-					</div>
-				</div>
-				<div class="list__col list__col-id hidden-xs text-center">
-					ID
-				</div>
-				<div class="list__header-col hidden-xs" data-sort="asc">
-					<a>Printer name</a>
-				</div>
-				<div class="list__header-col col-sm-1 hidden-xs text-center" data-sort="">
-					<a>Status</a>
-				</div>
-				<div class="list__header-col col-sm-4 hidden-xs" data-sort="">
-					<a>Location</a>
-				</div>
-				<div class="list__header-col list__item-actions"></div>
-
-				<!-- sorting for small displays -->
-				<div class="list__sorting list__header-col">
-					<div class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-							Sort by <span class="list__sorting-label">Printer name</span> <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right">
-							<li><a href="#">Printer name</a></li>
-							<li><a href="#">Status</a></li>
-							<li><a href="#">Location</a></li>
-						</ul>
-					</div>
-				</div>
-			</header>
-			<!-- end list header /-->
-
-			<!-- list item -->
-			
-				<div class="list__item">
-					<div class="list__col list__col-cb">
+			<table>
+				<thead>
+					<th class="list__cb">
 						<div class="cb">
-							<input id="checkbox-1" type="checkbox"  />
-							<label class="cb__label cb__label--hidden" for="checkbox-1"></label>
+							<input id="checkbox-all" type="checkbox" />
+							<label class="cb__label cb__label--hidden" for="checkbox-all"></label>
 						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--freedom">
-							000
-							<i class="printer-id__icon status-icon--freedom"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">Printix Freedom</b>
-						<span class="list__item-description"></span>
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--freedom"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
+					</th>
+					<th class="list__printer-id hidden-xs"><a>ID</a></th>
+					<th class="hidden-xs" data-sort="asc"><a>Printer name</a></th>
+					<th class="hidden-xs"><a>Status</a></th>
+					<th class="hidden-xs"><a>Location</a></th>
+					<th class="hidden-xs"></th>
+					<th class="list__sorting visible-xs" colspan="3">
+						<!-- sorting for small displays -->
+						<div class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
+								Sort by <span class="list__sorting-label">Printer name</span> <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
+								<li><a href="#">Printer name</a></li>
+								<li><a href="#">Status</a></li>
+								<li><a href="#">Location</a></li>
 							</ul>
 						</div>
-					</div>
-				</div>
-			
-				<div class="list__item">
-					<div class="list__col list__col-cb">
-						<div class="cb">
-							<input id="checkbox-2" type="checkbox"  />
-							<label class="cb__label cb__label--hidden" for="checkbox-2"></label>
-						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--online">
-							ADS
-							<i class="printer-id__icon status-icon--online"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">HP Officejet Color X555</b>
-						<span class="list__item-description">Copenhagen office - Lobby</span>
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--online"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						Copenhagen office - Lobby
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			
-				<div class="list__item">
-					<div class="list__col list__col-cb">
-						<div class="cb">
-							<input id="checkbox-3" type="checkbox"  />
-							<label class="cb__label cb__label--hidden" for="checkbox-3"></label>
-						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--offline">
-							BNM
-							<i class="printer-id__icon status-icon--offline"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">Hewlett-Packard LaserJet P4515</b>
-						<span class="list__item-description"></span>
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--offline"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			
-				<div class="list__item">
-					<div class="list__col list__col-cb">
-						<div class="cb">
-							<input id="checkbox-4" type="checkbox"  />
-							<label class="cb__label cb__label--hidden" for="checkbox-4"></label>
-						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--online">
-							CVB
-							<i class="printer-id__icon status-icon--online"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">HP LaserJet 500 MFP M525</b>
-						<span class="list__item-description">Copenhagen office - Lobby</span>
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--online"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						Copenhagen office - Lobby
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			
-				<div class="list__item">
-					<div class="list__col list__col-cb">
-						<div class="cb">
-							<input id="checkbox-5" type="checkbox"  />
-							<label class="cb__label cb__label--hidden" for="checkbox-5"></label>
-						</div>
-					</div>
-					<div class="list__col list__col-id">
-						<div class="printer-id printer-id--warning">
-							DFG
-							<i class="printer-id__icon status-icon--warning"></i>
-						</div>
-					</div>
-					<div class="list__col">
-						<b class="list__item-title">RICOH Aficio SP C420DN</b>
-						<span class="list__item-description"></span>
-					</div>
-					<div class="list__col col-sm-1 hidden-xs text-center">
-						<div class="status-icon status-icon--warning"></div>
-					</div>
-					<div class="list__col col-sm-4 hidden-xs">
-						
-					</div>
-					<div class="list__col list__item-actions">
-						<div class="list__item-overflow dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-								<i class="icon-overflow-menu"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-right">
-								<li><a href="#">Info</a></li>
-								<li><a href="#">Modify</a></li>
-								<li><a href="#" aria-controls="">Delete</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-			<!-- list item end /-->
+					</th>
+				</thead>
+				<tbody>
+					
+						<tr class="list__item list__item--active">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-1" type="checkbox" checked="checked" />
+									<label class="cb__label cb__label--hidden" for="checkbox-1"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--freedom">
+									000
+									<i class="printer-id__icon status-icon--freedom"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">Printix Freedom</b>
+								<span class="list__item-description"></span>
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--freedom"></div>
+							</td>
+							<td class="hidden-xs"></td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					
+						<tr class="list__item">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-2" type="checkbox"  />
+									<label class="cb__label cb__label--hidden" for="checkbox-2"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--online">
+									ADS
+									<i class="printer-id__icon status-icon--online"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">HP Officejet Color X555</b>
+								<span class="list__item-description">Copenhagen office - Lobby</span>
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--online"></div>
+							</td>
+							<td class="hidden-xs">Copenhagen office - Lobby</td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					
+						<tr class="list__item">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-3" type="checkbox"  />
+									<label class="cb__label cb__label--hidden" for="checkbox-3"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--offline">
+									BNM
+									<i class="printer-id__icon status-icon--offline"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">Hewlett-Packard LaserJet P4515</b>
+								<span class="list__item-description"></span>
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--offline"></div>
+							</td>
+							<td class="hidden-xs"></td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					
+						<tr class="list__item">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-4" type="checkbox"  />
+									<label class="cb__label cb__label--hidden" for="checkbox-4"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--online">
+									CVB
+									<i class="printer-id__icon status-icon--online"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">HP LaserJet 500 MFP M525</b>
+								<span class="list__item-description">Copenhagen office - Lobby</span>
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--online"></div>
+							</td>
+							<td class="hidden-xs">Copenhagen office - Lobby</td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					
+						<tr class="list__item">
+							<td class="list__cb">
+								<div class="cb">
+									<input id="checkbox-5" type="checkbox"  />
+									<label class="cb__label cb__label--hidden" for="checkbox-5"></label>
+								</div>
+							</td>
+							<td class="list__printer-id">
+								<div class="printer-id printer-id--warning">
+									DFG
+									<i class="printer-id__icon status-icon--warning"></i>
+								</div>
+							</td>
+							<td>
+								<b class="list__item-title">RICOH Aficio SP C420DN</b>
+								<span class="list__item-description"></span>
+							</td>
+							<td class="hidden-xs">
+								<div class="status-icon status-icon--warning"></div>
+							</td>
+							<td class="hidden-xs"></td>
+							<td>
+								<ul class="list__item-actions">
+									<li class="list__item-overflow dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+											<i class="icon-overflow-vert"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right">
+											<li><a href="#">Info</a></li>
+											<li><a href="/templates/printers/settings">Modify</a></li>
+											<li><a href="#" aria-controls="">Delete</a></li>
+										</ul>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
@@ -283,7 +273,7 @@
 <script>
 	// TESTING ONLY!!! REMOVE FOR PRODUCTION !!!
 	$('.list .cb :checkbox').change(function(){
-		var listItem = $(this).closest('.list__item');
+		var listItem = $(this).closest('tr');
 		
 		listItem.toggleClass('list__item--active');
 	});

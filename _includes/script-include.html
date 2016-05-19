@@ -2,7 +2,7 @@
 <script>
 	// TESTING ONLY!!! REMOVE FOR PRODUCTION !!!
 	$('.list .cb :checkbox').change(function(){
-		var listItem = $(this).closest('.list__item');
+		var listItem = $(this).closest('tr');
 		
 		listItem.toggleClass('list__item--active');
 	});

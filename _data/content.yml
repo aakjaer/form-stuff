@@ -2,6 +2,7 @@ printers:
   - title: Printix Freedom
     id: "000"
     status: freedom
+    active: true
   - title: HP Officejet Color X555
     id: ADS
     status: online
