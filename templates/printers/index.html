@@ -26,7 +26,7 @@ include: list-checkboxes
 					</th>
 					<th class="list__printer-id hidden-xs"><a>ID</a></th>
 					<th class="hidden-xs" data-sort="asc"><a>Printer name</a></th>
-					<th class="hidden-xs"><a>Status</a></th>
+					<th class="hidden-xs text-center"><a>Status</a></th>
 					<th class="hidden-xs"><a>Location</a></th>
 					<th class="hidden-xs"></th>
 					<th class="list__sorting visible-xs" colspan="3">
@@ -60,9 +60,9 @@ include: list-checkboxes
 							</td>
 							<td>
 								<b class="list__item-title">{{ printer.title }}</b>
-								{% if printer.locaition != "" %}<span class="list__item-description">{{ printer.location }}</span>{% endif %}
+								{% if printer.location != "" %}<span class="list__item-description">{{ printer.location }}</span>{% endif %}
 							</td>
-							<td class="hidden-xs">
+							<td class="hidden-xs text-center">
 								<div class="status-icon status-icon--{{ printer.status }}"></div>
 							</td>
 							<td class="hidden-xs">{{ printer.location }}</td>
