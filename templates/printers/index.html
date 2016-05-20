@@ -6,9 +6,9 @@ include: list-checkboxes
 
 {%  include page-header.html %}
 
-<div class="main-content">
+<div class="main-content page-actions-fixed">
 	<div class="container">
-		<ul class="page-actions">
+		<ul class="action-list">
 			<li><button><i class="icon-add"></i></button></li>
 			<li><button><i class="icon-delete"></i></button></li>
 			<li><button><i class="icon-search"></i></button></li>
@@ -85,6 +85,16 @@ include: list-checkboxes
 				</tbody>
 			</table>
 		</div>
+        <div class="page-actions page-actions--fixed">
+            <button type="button"
+                    class="btn btn-primary"
+                    ng-disabled="selectedPrinters < 1"
+                    ng-show="(printerListService.list| filter: {isUnderCreation: false, isCreatedSuccessfully: true}).length > 0"
+                    data-px-test="printer-list-button-modify-selected"
+                    ng-click="editSelectedPrinters()">
+                {{"Modify"| translate}}<span ng-show="selectedPrinters > 0">&nbsp;({{selectedPrinters}})</span>
+            </button>
+        </div>		
 	</div>
 </div>
 

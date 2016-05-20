@@ -552,7 +552,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled, .list__item-actions, .page-actions {
+.list-unstyled, .list__item-actions, .action-list {
   padding-left: 0;
   list-style: none; }
 
@@ -2598,10 +2598,6 @@ input[type="button"].btn-block {
 .separator-white-faded {
   border-color: rgba(255, 255, 255, 0.3); }
 
-@media screen and (max-width: 767px) {
-  .form--fixed {
-    padding-bottom: 7em; } }
-
 .form-col {
   width: auto; }
 
@@ -2645,25 +2641,6 @@ input[type="button"].btn-block {
   border-bottom: 1px solid #E2E2E2; }
   .form-section--separate + .form-section {
     border: 0; }
-
-.form-actions {
-  margin: 2em 0 0;
-  padding: 1.3em 0;
-  border-top: 1px solid #E2E2E2;
-  text-align: right;
-  background: white; }
-  .form-actions .btn-primary {
-    padding: 0.5em 3em;
-    font-size: 1.2em; }
-  @media screen and (max-width: 767px) {
-    .form-actions .btn {
-      display: block; } }
-
-@media screen and (max-width: 767px) {
-  .form-actions--fixed {
-    position: fixed;
-    width: 100%;
-    bottom: 0; } }
 
 @font-face {
   font-family: 'Lato';
@@ -3626,23 +3603,50 @@ a:hover, a:focus {
   background: #fff; }
 
 @media screen and (max-width: 767px) {
-  .mobile-full-width, .form-section--separate, .form-actions {
+  .mobile-full-width, .form-section--separate, .page-actions {
     margin-left: -15px;
     margin-right: -15px;
     padding-left: 15px;
     padding-right: 15px; } }
 
-.page-actions {
+.action-list {
   margin: 1em 0;
   text-align: right; }
-  .page-actions li {
+  .action-list li {
     display: inline-block; }
-  .page-actions li + li {
+  .action-list li + li {
     margin-left: 1.2em; }
-  .page-actions button {
+  .action-list button {
     background-color: transparent;
     border: none;
     padding: 0;
     margin: 0;
     outline: none;
     font-size: 1.3em; }
+
+@media screen and (max-width: 767px) {
+  .page-actions-fixed {
+    padding-bottom: 7em; } }
+
+.page-actions {
+  margin: 2em 0 0;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  border-top: 1px solid #E2E2E2;
+  text-align: right;
+  background: white; }
+  .page-actions .btn-primary {
+    font-size: 1em;
+    padding: 0.5em 3em; }
+  @media screen and (max-width: 767px) {
+    .page-actions .btn {
+      display: block;
+      width: 100%;
+      font-size: 1.2em; } }
+
+@media screen and (max-width: 767px) {
+  .page-actions--fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0; } }

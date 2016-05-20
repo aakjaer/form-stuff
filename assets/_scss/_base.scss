@@ -54,7 +54,7 @@ main {
 	}
 }
 
-.page-actions {
+.action-list {
 	@extend .list-unstyled;
 	margin: 1em 0;
 	text-align: right;
@@ -76,3 +76,50 @@ main {
 	    font-size: 1.3em;
 	}
 }
+
+
+// use this class on a parent element to add bottom padding
+// to the page, so that content doesn't get hidden behind
+// the fixed page-actions element.
+.page-actions-fixed {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		padding-bottom: 7em;
+	}	
+}
+
+
+// form buttons and links (submit, cancel etc.)
+.page-actions {
+	margin: 2em 0 0;
+	padding-top: 1.3em;
+	padding-bottom: 1.3em;
+	border-top: 1px solid $separator-color;
+	@extend .mobile-full-width;
+	text-align: right;
+	background: $body-bg;
+
+	.btn-primary {
+		font-size: 1em;
+		padding: 0.5em 3em;
+	}
+
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		
+		.btn {
+			display: block;
+			width: 100%;
+			font-size: 1.2em;
+		}
+	}
+}
+
+//
+.page-actions--fixed {
+	@media screen and (max-width: $grid-float-breakpoint-max) {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+}
+

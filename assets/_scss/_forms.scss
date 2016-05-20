@@ -1,10 +1,3 @@
-// combine with .form-actions--fixed
-.form--fixed {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
-		padding-bottom: 7em;
-	}
-}
-
 .form-col {
 	width: auto;
 }
@@ -70,33 +63,5 @@
 	}
 }
 
-// form buttons and links (submit, cancel etc.)
-.form-actions {
-	margin: 2em 0 0;
-	padding: 1.3em 0;
-	border-top: 1px solid $separator-color;
-	@extend .mobile-full-width;
-	text-align: right;
-	background: $body-bg;
-
-	.btn-primary {
-		padding: 0.5em 3em;
-		font-size: 1.2em;
-	}
-
-	@media screen and (max-width: $grid-float-breakpoint-max) {
-		.btn {
-			display: block;
-		}
-	}
-}
-
-.form-actions--fixed {
-	@media screen and (max-width: $grid-float-breakpoint-max) {
-		position: fixed;
-		width: 100%;
-		bottom: 0;
-	}
-}
 
 
